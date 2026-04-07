@@ -280,7 +280,7 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
-  .nav-logo-img { height: 60px; width: auto; transition: height .3s; }
+  .nav-logo-img { height: 70px; width: auto; transition: height .3s; }
   #mainNav.scrolled .nav-logo-img { height: 90px; }
 
   .nav-link-custom {
@@ -414,7 +414,7 @@
     display: flex;
     align-items: center;
     z-index: 2;
-    padding-top: 100px;
+    padding-top: 160px;
   }
   .hero-eyebrow {
     font-family: 'Outfit', sans-serif;
@@ -1400,6 +1400,7 @@
 
   /* Responsive */
   @media (max-width: 991px) {
+    .hero-slide-content { padding-top: 130px; }
     .about-badge { right: 0; top: auto; bottom: 5rem; transform: none; }
     .about-image-stack { height: 380px; }
     .about-img-main { width: 85%; height: 85%; }
@@ -1415,6 +1416,7 @@
     .footer-bottom { flex-direction: column; text-align: center; }
   }
   @media (max-width: 575px) {
+    .hero-slide-content { padding-top: 100px; }
     #topBar { display: none; }
     #mainNav { top: 0; }
     body { padding-top: 0; }
@@ -1492,11 +1494,10 @@
             <li><a class="dropdown-item" href="courses.html#short"><i class="bi bi-lightning me-2" style="color:var(--red);"></i>Short-Term Pro Courses</a></li>
           </ul>
         </li>
-        <li><a href="#placements" class="nav-link-custom">Placements</a></li>
+        <li><a href="placements.html" class="nav-link-custom">Placements</a></li>
         <li><a href="about.html#gallery" class="nav-link-custom">Gallery</a></li>
-        <li><a href="#contact-modal" class="nav-link-custom">Contact</a></li>
-      </ul>
-
+        <li><a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="nav-link-custom">Contact</a></li>
+        </ul>
       <!-- CTA + Mobile Toggle -->
       <div class="d-flex align-items-center gap-3">
         <a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="btn-brand-red d-none d-md-inline-flex">
@@ -1529,8 +1530,8 @@
     <a href="courses.html#short" class="mobile-nav-link" style="padding-left:2.5rem;font-size:.85rem;color:var(--muted);">↳ Short-Term Courses</a>
     <a href="#placements" class="mobile-nav-link">Placements</a>
     <a href="about.html#gallery" class="mobile-nav-link">Gallery</a>
-    <div style="padding:1.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.8rem;">
-      <a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-bs-dismiss="offcanvas" class="btn-brand-red justify-content-center">
+    <a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-bs-dismiss="offcanvas" class="mobile-nav-link">Contact</a>
+    <div style="padding:1.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.8rem;">      <a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-bs-dismiss="offcanvas" class="btn-brand-red justify-content-center">
         <i class="bi bi-send"></i> Enquire Now
       </a>
       <a href="tel:+917840002724" class="btn-outline-dark justify-content-center">
@@ -1557,7 +1558,7 @@
 
       <!-- Slide 1 – VFX -->
       <div class="carousel-item active">
-        <img src="https://images.unsplash.com/photo-1626379953822-baec19c3accd?w=1920&q=90&fit=crop"
+        <img src="Images/hero_banner_02.jpg"
              alt="VFX artist working on digital effects at MAAC Ghaziabad"
              loading="eager" fetchpriority="high"/>
         <div class="hero-gradient"></div>
@@ -2767,7 +2768,7 @@
           animateCounter(card.closest('.stat-card'), +card.dataset.target, card.dataset.suffix || '');
         });
       }
-    }, { threshold: 0.3 });
+    }, { threshold: 1 });
     statsObserver.observe(statsSection);
   }
 
