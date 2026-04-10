@@ -174,8 +174,8 @@ body { padding-top: 0; }
   box-shadow: 0 4px 24px rgba(0,0,0,.06);
   padding: .65rem 0;
 }
-.nav-logo-img { height: 70px; width: auto; transition: height .3s; }
-#mainNav.scrolled .nav-logo-img { height: 90px; }
+  .nav-logo-img { height: 70px; width: auto; transition: height .3s; }
+  #mainNav.scrolled .nav-logo-img { height: 90px; }
 .nav-link-custom {
   font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 600;
   letter-spacing: .06em; color: #fff !important; text-decoration: none;
@@ -193,17 +193,49 @@ body { padding-top: 0; }
 .mobile-toggle { color: #fff; transition: color var(--trans); }
 #mainNav.scrolled .mobile-toggle { color: var(--ink); }
 
+/* ── DROPDOWN MENU ── */
 .nav-dropdown .dropdown-menu {
-  background: var(--glass-bg); backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid rgba(0,0,0,.08); border-radius: 10px; box-shadow: var(--shadow-lg);
-  padding: .5rem; min-width: 220px; margin-top: .8rem;
+  background: #0F0F0F;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: .75rem;
+  min-width: 240px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.4);
+  margin-top: 0;
+  backdrop-filter: blur(10px);
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .3s ease;
 }
-.nav-dropdown .dropdown-item {
-  font-family: 'Outfit', sans-serif; font-size: .82rem; font-weight: 500;
-  color: var(--ink); padding: .6rem 1rem; border-radius: 6px;
-  transition: background var(--trans), color var(--trans);
+@media (min-width: 992px) {
+  .nav-dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}.nav-dropdown .dropdown-item {
+  font-family: 'Outfit', sans-serif;
+  font-size: .9rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.8);
+  padding: .75rem 1.2rem;
+  border-radius: 8px;
+  transition: all .3s ease;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
 }
-.nav-dropdown .dropdown-item:hover { background: rgba(212,175,55,.12); color: var(--red); }
+.nav-dropdown .dropdown-item:hover {
+  background: rgba(255,255,255,.05);
+  color: var(--gold);
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-sub { padding-left: 1rem; border-left: 2px solid var(--border); margin-left: 1.5rem; margin-bottom: .5rem; }
+  .mobile-sub-link { display: block; padding: .6rem 0; font-size: .85rem; color: var(--muted); text-decoration: none; }
+}
 .offcanvas-start { width: 300px !important; background: var(--white) !important; }
 .offcanvas-header { border-bottom: 1px solid var(--border); padding: 1.5rem; }
 .mobile-nav-link {
@@ -217,7 +249,7 @@ body { padding-top: 0; }
    PAGE HERO
 ══════════════════════════════ */
 .page-hero {
-  position: relative; height: 540px; display: flex; align-items: flex-end; overflow: hidden;
+  position: relative; height: 590px; display: flex; align-items: flex-end; overflow: hidden;
   padding-top: 160px;
 }
 .page-hero-img {
@@ -276,10 +308,16 @@ body { padding-top: 0; }
   pointer-events: none;
 }
 .stat-card {
-  background: var(--white); border-radius: 16px; padding: 2.2rem 1.8rem;
+  background: var(--white); border-radius: 16px; padding: 2rem 1rem;
   text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,.06);
   border: 1px solid rgba(0,0,0,.04); position: relative; overflow: hidden;
   transition: transform var(--trans), box-shadow var(--trans);
+  height: 100%;
+}
+@media (max-width: 767px) {
+  .stat-card { padding: 1.5rem .8rem; }
+  .stat-num { font-size: 2.2rem !important; }
+  .stat-label { font-size: .65rem !important; }
 }
 .stat-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
@@ -639,24 +677,25 @@ body { padding-top: 0; }
       <ul class="d-none d-lg-flex align-items-center gap-4 list-unstyled mb-0">
         <li><a href="index.html"     class="nav-link-custom">Home</a></li>
         <li><a href="about.html"     class="nav-link-custom">About</a></li>
-        <li class="nav-dropdown dropdown">
-          <a class="nav-link-custom dropdown-toggle" href="courses.html" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown nav-dropdown">
+          <a class="nav-link-custom dropdown-toggle" href="courses.html" id="navCourses" role="button">
             Courses <i class="bi bi-chevron-down" style="font-size:.65rem;"></i>
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="courses.html#vfx"><i class="bi bi-stars me-2" style="color:var(--gold);"></i>Visual Effects (VFX)</a></li>
-            <li><a class="dropdown-item" href="courses.html#3d"><i class="bi bi-cube me-2" style="color:var(--gold);"></i>3D Animation</a></li>
-            <li><a class="dropdown-item" href="courses.html#game"><i class="bi bi-controller me-2" style="color:var(--gold);"></i>Game Design</a></li>
-            <li><a class="dropdown-item" href="courses.html#graphics"><i class="bi bi-brush me-2" style="color:var(--gold);"></i>Graphic Design</a></li>
-            <li><a class="dropdown-item" href="courses.html#video"><i class="bi bi-camera-video me-2" style="color:var(--gold);"></i>Video Editing</a></li>
-            <li><a class="dropdown-item" href="courses.html#arvr"><i class="bi bi-headset-vr me-2" style="color:var(--gold);"></i>AR &amp; VR</a></li>
-            <li><hr class="dropdown-divider" style="border-color:var(--border);margin:.3rem .5rem;"/></li>
-            <li><a class="dropdown-item" href="courses.html#short"><i class="bi bi-lightning me-2" style="color:var(--red);"></i>Short-Term Pro</a></li>
+          <ul class="dropdown-menu fade-up" aria-labelledby="navCourses">
+            <li><a class="dropdown-item" href="course-graphic-design.html">Graphic Design</a></li>
+            <li><a class="dropdown-item" href="course-video-editing.html">Video Editing</a></li>
+            <li><a class="dropdown-item" href="course-game-design.html">Game Design</a></li>
+            <li><a class="dropdown-item" href="course-ar-vr.html">AR & VR</a></li>
+            <li><a class="dropdown-item" href="course-broadcast.html">Broadcast</a></li>
+            <li><a class="dropdown-item" href="course-3d-animation.html">3D Animation</a></li>
+            <li><a class="dropdown-item" href="course-vfx.html">Visual Effects (VFX)</a></li>
+            <li><a class="dropdown-item" href="course-digital-design.html">Digital Design</a></li>
+            <li><a class="dropdown-item" href="course-short-term.html">Short Term Courses</a></li>
           </ul>
         </li>
         <li><a href="placements.html" class="nav-link-custom active" aria-current="page">Placements</a></li>
-        <li><a href="about.html#gallery" class="nav-link-custom">Gallery</a></li>
-        <li><a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="nav-link-custom">Contact</a></li>
+        <li><a href="gallery.html"    class="nav-link-custom">Gallery</a></li>
+        <li><a href="contact.html"    class="nav-link-custom">Contact</a></li>
       </ul>
       <div class="d-flex align-items-center gap-3">
         <a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="btn-brand-red d-none d-md-inline-flex">
@@ -679,7 +718,18 @@ body { padding-top: 0; }
   <div class="offcanvas-body p-0">
     <a href="index.html"      class="mobile-nav-link">Home</a>
     <a href="about.html"      class="mobile-nav-link">About</a>
-    <a href="courses.html"    class="mobile-nav-link">All Courses</a>
+    <a href="courses.html"    class="mobile-nav-link">Courses</a>
+    <div class="mobile-nav-sub">
+      <a href="course-graphic-design.html" class="mobile-sub-link">Graphic Design</a>
+      <a href="course-video-editing.html" class="mobile-sub-link">Video Editing</a>
+      <a href="course-game-design.html" class="mobile-sub-link">Game Design</a>
+      <a href="course-3d-animation.html" class="mobile-sub-link">3D Animation</a>
+      <a href="course-vfx.html" class="mobile-sub-link">Visual Effects (VFX)</a>
+      <a href="course-digital-design.html" class="mobile-sub-link">Digital Design</a>
+      <a href="course-ar-vr.html" class="mobile-sub-link">AR & VR</a>
+      <a href="course-broadcast.html" class="mobile-sub-link">Broadcast</a>
+      <a href="course-short-term.html" class="mobile-sub-link">Short Term Courses</a>
+    </div>
     <a href="placements.html" class="mobile-nav-link" style="color:var(--red);">Placements</a>
     <a href="about.html#gallery" class="mobile-nav-link">Gallery</a>
     <div style="padding:1.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.8rem;">
@@ -1505,13 +1555,12 @@ body { padding-top: 0; }
       <div class="col-6 col-md-3 col-lg-2">
         <h3 class="footer-heading">Programmes</h3>
         <ul class="footer-links">
-          <li><a href="courses.html#vfx">ADVFX Plus</a></li>
-          <li><a href="courses.html#3d">AD3DIGHP</a></li>
-          <li><a href="courses.html#3d">D3D</a></li>
-          <li><a href="courses.html#3d">DAFM</a></li>
-          <li><a href="courses.html#game">DGWA</a></li>
-          <li><a href="courses.html#graphics">APDMD</a></li>
-          <li><a href="courses.html#short">Short-Term Pro</a></li>
+          <li><a href="course-vfx.html">ADVFX Plus</a></li>
+          <li><a href="course-3d-animation.html">AD3D Edge Plus</a></li>
+          <li><a href="course-game-design.html">Game Design</a></li>
+          <li><a href="course-graphic-design.html">Graphic Design</a></li>
+          <li><a href="course-broadcast.html">Broadcast</a></li>
+          <li><a href="course-short-term.html">Short Term Pro</a></li>
         </ul>
       </div>
       <div class="col-md-6 col-lg-4">
@@ -1643,33 +1692,36 @@ body { padding-top: 0; }
   document.querySelectorAll('.sr, .sr-left, .sr-right').forEach(el => srObs.observe(el));
 
   /* ── STAT COUNTER ── */
-  function runCounter(el, target, suffix) {
-    const numEl  = el.querySelector('.stat-num');
-    const sfxEl  = numEl ? numEl.querySelector('.sfx') : null;
-    if (!numEl) return;
-    const start  = performance.now();
-    const dur    = 1800;
-    function tick(now) {
-      const p   = Math.min((now - start) / dur, 1);
-      const val = Math.round((1 - Math.pow(1 - p, 4)) * target);
-      if (sfxEl) {
-        numEl.childNodes[0].textContent = val.toLocaleString('en-IN');
+  function animateCounter(el) {
+    const target = +el.dataset.target;
+    let start = 0;
+    const duration = 1800;
+    const startTime = performance.now();
+    function update(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 4);
+      start = Math.round(eased * target);
+      if (el.childNodes.length > 0) {
+        el.childNodes[0].textContent = start.toLocaleString('en-IN');
       }
-      if (p < 1) requestAnimationFrame(tick);
+      if (progress < 1) requestAnimationFrame(update);
     }
-    requestAnimationFrame(tick);
+    requestAnimationFrame(update);
   }
+
   const statsSection = document.getElementById('stats');
   let statsDone = false;
   if (statsSection) {
-    new IntersectionObserver((entries) => {
+    const statsObserver = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting && !statsDone) {
         statsDone = true;
-        document.querySelectorAll('[data-target]').forEach(el => {
-          runCounter(el.closest('.stat-card'), +el.dataset.target, el.dataset.suffix || '');
+        document.querySelectorAll('#stats [data-target]').forEach(el => {
+          animateCounter(el);
         });
       }
-    }, { threshold: 0.3 }).observe(statsSection);
+    }, { threshold: 0.15 });
+    statsObserver.observe(statsSection);
   }
 
   /* ── SALARY BARS ── */

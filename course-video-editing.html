@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEO META TAGS
+════════════════════════════════════════════════════════════ -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Video Editing & Post-Production Courses in Ghaziabad | MAAC RDC</title>
+<meta name="description" content="Master Professional Video Editing, Colour Grading, and Post-Production at MAAC Ghaziabad RDC. DVEP course with industry-certified curriculum."/>
+<meta name="keywords" content="Video Editing Ghaziabad, Post-Production course, DVEP, Premiere Pro, DaVinci Resolve, MAAC Ghaziabad"/>
+<meta name="author" content="MAAC Ghaziabad RDC"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } }</script>
+
+<style>
+/* ══════════════════════════════
+   DESIGN TOKENS
+══════════════════════════════ */
+:root {
+  --red:        #D2232A;
+  --red-dark:   #A51B21;
+  --gold:       #D4AF37;
+  --gold-light: #F0D060;
+  --white:      #FFFFFF;
+  --off-white:  #F8F7F4;
+  --ink:        #0F0F0F;
+  --muted:      #6B7280;
+  --border:     rgba(0,0,0,.08);
+  --glass-bg:   rgba(255,255,255,.75);
+  --glass-blur: blur(18px);
+  --shadow-lg:  0 24px 64px rgba(0,0,0,.14);
+  --trans:      .35s cubic-bezier(.4,0,.2,1);
+}
+html { scroll-behavior: smooth; }
+body { background: var(--white); font-family: 'Outfit', sans-serif; color: var(--ink); overflow-x: hidden; padding-top: 0; }
+
+/* ── NAVIGATION ── */
+#topBar { background: transparent; color: #fff; font-family: 'Outfit', sans-serif; font-size: .72rem; padding: .4rem 0; position: fixed; top: 0; left: 0; right: 0; z-index: 10000; transition: all .4s ease; }
+#topBar.scrolled { transform: translateY(-100%); }
+#mainNav { position: fixed; top: 36px; left: 0; right: 0; z-index: 9999; transition: all .4s ease; padding: 1.1rem 0; background: transparent; }
+#mainNav.scrolled { top: 0; background: var(--glass-bg); backdrop-filter: var(--glass-blur); border-bottom: 1px solid rgba(0,0,0,.07); box-shadow: 0 4px 24px rgba(0,0,0,.06); padding: .65rem 0; }
+.nav-logo-img { height: 46px; width: auto; transition: height .3s; }
+#mainNav.scrolled .nav-logo-img { height: 38px; }
+.nav-link-custom { font-family: 'Outfit', sans-serif; font-size: .82rem; font-weight: 500; color: #fff !important; text-decoration: none; padding: .3rem 0 !important; position: relative; transition: color var(--trans); }
+#mainNav.scrolled .nav-link-custom { color: var(--ink) !important; }
+.nav-link-custom:hover, .nav-link-custom.active { color: var(--red) !important; }
+.mobile-toggle { color: #fff; transition: color var(--trans); }
+#mainNav.scrolled .mobile-toggle { color: var(--ink); }
+
+/* ── DROPDOWN MENU ── */
+.nav-dropdown .dropdown-menu {
+  background: #0F0F0F;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: .75rem;
+  min-width: 240px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.4);
+  margin-top: 0;
+  backdrop-filter: blur(10px);
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .3s ease;
+}
+@media (min-width: 992px) {
+  .nav-dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.nav-dropdown .dropdown-item {
+  font-family: 'Outfit', sans-serif;
+  font-size: .9rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.8);
+  padding: .75rem 1.2rem;
+  border-radius: 8px;
+  transition: all .3s ease;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+.nav-dropdown .dropdown-item:hover {
+  background: rgba(255,255,255,.05);
+  color: var(--gold);
+  padding-left: 1.5rem;
+}
+@media (max-width: 991px) {
+  .mobile-nav-sub { padding-left: 1rem; border-left: 2px solid var(--border); margin-left: 1.5rem; margin-bottom: .5rem; }
+  .mobile-sub-link { display: block; padding: .6rem 0; font-size: .85rem; color: var(--muted); text-decoration: none; }
+}
+
+/* ── PAGE HERO ── */
+.page-hero { position: relative; height: 480px; display: flex; align-items: flex-end; overflow: hidden; padding-top: 160px; }
+.page-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.5); }
+.page-hero-gradient { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,10,.85) 0%, rgba(10,10,10,.3) 60%, transparent 100%); }
+.page-hero-content { position: relative; z-index: 2; padding: 0 0 3.5rem; width: 100%; }
+.page-hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 700; color: #fff; line-height: .95; letter-spacing: -.02em; margin: 0; }
+.page-hero-title em { color: var(--gold-light); font-style: italic; }
+.breadcrumb-custom { display: flex; align-items: center; gap: .5rem; font-family: 'Outfit', sans-serif; font-size: .72rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .9rem; }
+.breadcrumb-custom a { color: rgba(255,255,255,.5); text-decoration: none; }
+.breadcrumb-custom .sep { color: rgba(255,255,255,.25); }
+.breadcrumb-custom .current { color: var(--gold); }
+
+/* ── COURSE CARDS ── */
+.course-card { background: var(--white); border-radius: 20px; border: 1px solid var(--border); overflow: hidden; transition: all .4s ease; height: 100%; display: flex; flex-direction: column; }
+.course-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
+.cc-img-wrap { position: relative; height: 240px; overflow: hidden; }
+.cc-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.course-card:hover .cc-img-wrap img { transform: scale(1.08); }
+.cc-body { padding: 2rem; flex: 1; display: flex; flex-direction: column; }
+.cc-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 1rem; color: var(--ink); }
+.cc-desc { font-size: .9rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.5rem; }
+.btn-brand-red { background: var(--red); color: #fff; padding: .8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: .5rem; transition: background .3s; }
+.btn-brand-red:hover { background: var(--red-dark); color: #fff; }
+
+/* ── FOOTER ── */
+#mainFooter { background: var(--ink); color: rgba(255,255,255,.65); padding: 6rem 0 2rem; }
+.footer-heading { color: var(--gold); font-family: 'Outfit', sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 1.5rem; }
+.footer-links { list-style: none; padding: 0; }
+.footer-links li { margin-bottom: .8rem; }
+.footer-links a { color: rgba(255,255,255,.5); text-decoration: none; font-size: .85rem; }
+
+/* ── SCROLL REVEAL ── */
+.sr { opacity: 0; transform: translateY(30px); transition: all .7s ease; }
+.sr.visible { opacity: 1; transform: none !important; }
+
+@media (max-width: 575px) { .page-hero { padding-top: 100px; } #topBar { display: none; } #mainNav { top: 0; } }
+</style>
+</head>
+<body>
+
+<div id="topBar">
+  <div class="container-xl">
+    <div class="d-flex align-items-center justify-content-between">
+      <div style="font-size:.72rem;"><i class="bi bi-geo-alt-fill me-1" style="color:var(--gold);"></i>RDC Rajnagar, Ghaziabad</div>
+      <div class="d-flex gap-3">
+        <a href="tel:+917840002724" style="color:var(--gold); text-decoration:none; font-weight:600; font-size:.72rem;">+91 784 000 2724</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav id="mainNav">
+  <div class="container-xl">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html"><img src="Images/logo_white.png" id="navLogo" class="nav-logo-img" alt="Logo"></a>
+      <ul class="d-none d-lg-flex align-items-center gap-4 list-unstyled mb-0">
+        <li><a href="index.html" class="nav-link-custom">Home</a></li>
+        <li><a href="about.html" class="nav-link-custom">About</a></li>
+        <li class="nav-item dropdown nav-dropdown">
+          <a class="nav-link-custom active dropdown-toggle" href="courses.html" id="navCourses" role="button" aria-current="page">
+            Courses <i class="bi bi-chevron-down" style="font-size:.65rem;"></i>
+          </a>
+          <ul class="dropdown-menu fade-up" aria-labelledby="navCourses">
+            <li><a class="dropdown-item" href="course-graphic-design.html">Graphic Design</a></li>
+            <li><a class="dropdown-item" href="course-video-editing.html">Video Editing</a></li>
+            <li><a class="dropdown-item" href="course-game-design.html">Game Design</a></li>
+            <li><a class="dropdown-item" href="course-ar-vr.html">AR & VR</a></li>
+            <li><a class="dropdown-item" href="course-broadcast.html">Broadcast</a></li>
+            <li><a class="dropdown-item" href="course-3d-animation.html">3D Animation</a></li>
+            <li><a class="dropdown-item" href="course-vfx.html">Visual Effects (VFX)</a></li>
+            <li><a class="dropdown-item" href="course-digital-design.html">Digital Design</a></li>
+            <li><a class="dropdown-item" href="course-short-term.html">Short Term Courses</a></li>
+          </ul>
+        </li>
+        <li><a href="placements.html" class="nav-link-custom">Placements</a></li>
+        <li><a href="contact.html"    class="nav-link-custom">Contact</a></li>
+      </ul>
+      <button class="btn d-lg-none mobile-toggle" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><i class="bi bi-list"></i></button>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-start" id="mobileMenu">
+  <div class="offcanvas-header">
+    <img src="Images/logo_black.png" height="40" alt="Logo">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="courses.html" class="mobile-nav-link">Courses</a>
+    <div class="mobile-nav-sub">
+      <a href="course-graphic-design.html" class="mobile-sub-link">Graphic Design</a>
+      <a href="course-video-editing.html" class="mobile-sub-link">Video Editing</a>
+      <a href="course-game-design.html" class="mobile-sub-link">Game Design</a>
+      <a href="course-3d-animation.html" class="mobile-sub-link">3D Animation</a>
+      <a href="course-vfx.html" class="mobile-sub-link">Visual Effects (VFX)</a>
+      <a href="course-digital-design.html" class="mobile-sub-link">Digital Design</a>
+    </div>
+    <a href="placements.html" class="mobile-nav-link">Placements</a>
+  </div>
+</div>
+
+<header class="page-hero">
+  <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=1920&q=90&fit=crop" class="page-hero-img" alt="Video Editing">
+  <div class="page-hero-gradient"></div>
+  <div class="page-hero-content container-xl">
+    <nav class="breadcrumb-custom">
+      <a href="index.html">Home</a><span class="sep">›</span>
+      <a href="courses.html">Courses</a><span class="sep">›</span>
+      <span class="current">Video Editing</span>
+    </nav>
+    <h1 class="page-hero-title">Video Editing & <em>Post-Production</em></h1>
+  </div>
+</header>
+
+<section class="py-20 bg-light">
+  <div class="container-xl">
+    <div class="row g-5">
+      <div class="col-lg-6 sr">
+        <article class="course-card">
+          <div class="cc-img-wrap"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80" alt="DVEP"></div>
+          <div class="cc-body">
+            <h2 class="cc-title">Diploma in Video Editing & Post-Production (DVEP)</h2>
+            <p class="cc-desc">Comprehensive post-production training — from non-linear editing and colour science to sound design, motion graphics integration, and delivery for OTT, broadcast, and social platforms.</p>
+            <ul class="mb-4 text-muted small">
+              <li>Duration: 12 Months</li>
+              <li>Software: Premiere Pro, DaVinci Resolve, After Effects, Audition</li>
+            </ul>
+            <a href="#enquiryModal" data-bs-toggle="modal" class="btn-brand-red">Enquire Now</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="mainFooter">
+  <div class="container-xl">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <img src="Images/logo_white.png" height="50" alt="Logo" class="mb-4">
+        <p class="small opacity-50">Maya Academy of Advanced Creativity — India's premier institute for Animation, VFX, Gaming & Design.</p>
+      </div>
+      <div class="col-lg-2">
+        <h6 class="footer-heading">Quick Links</h6>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h6 class="footer-heading">Contact Us</h6>
+        <p class="small opacity-50">RDC Rajnagar, Ghaziabad, UP 201002<br>maacrdcghaziabad@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function() {
+  const nav = document.getElementById('mainNav');
+  const topBar = document.getElementById('topBar');
+  const navLogo = document.getElementById('navLogo');
+  window.addEventListener('scroll', () => {
+    const sc = window.scrollY > 60;
+    nav.classList.toggle('scrolled', sc);
+    if(topBar) topBar.classList.toggle('scrolled', sc);
+    if(navLogo) navLogo.src = sc ? 'Images/logo_black.png' : 'Images/logo_white.png';
+  });
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.sr').forEach(el => observer.observe(el));
+})();
+</script>
+</body>
+</html>

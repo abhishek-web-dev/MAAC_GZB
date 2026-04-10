@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════
+     SEO META TAGS
+════════════════════════════════════════════════════ -->
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Gallery | MAAC Ghaziabad RDC — Student Work, Campus Life & Events</title>
+<meta name="description" content="Explore MAAC Ghaziabad RDC's gallery — student animation projects, VFX work, campus infrastructure, lab photos, events, and award ceremonies. See what creative excellence looks like."/>
+<meta name="keywords" content="MAAC Ghaziabad gallery, animation student work, VFX projects, campus photos, creative work, MAAC RDC events, student projects gallery"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://maacghaziabad.in/gallery.html"/>
+<meta property="og:title" content="Gallery — MAAC Ghaziabad RDC"/>
+<meta property="og:description" content="Student work, campus life, events and more from MAAC Ghaziabad RDC."/>
+<meta property="og:type" content="website"/>
+
+<!-- ═══════════════════════════════════════════════════
+     FONTS & LIBRARIES
+════════════════════════════════════════════════════ -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Outfit:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config = { corePlugins: { preflight: false } }</script>
+
+<style>
+/* ═══════════════════════════════════════════════════
+   DESIGN TOKENS
+════════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;}
+:root{
+  --red:#D2232A; --red-dark:#A51B21;
+  --gold:#D4AF37; --gold-light:#F0D060;
+  --white:#FFFFFF; --off-white:#F8F7F4;
+  --ink:#0F0F0F; --ink-2:#1A1A1A;
+  --muted:#6B7280; --muted-2:#9CA3AF;
+  --border:rgba(0,0,0,.08);
+  --glass-bg:rgba(255,255,255,.75);
+  --glass-blur:blur(18px);
+  --shadow-sm:0 2px 16px rgba(0,0,0,.06);
+  --shadow-md:0 8px 40px rgba(0,0,0,.10);
+  --shadow-lg:0 24px 64px rgba(0,0,0,.14);
+  --trans:.35s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth;}
+body{background:var(--white);font-family:'Outfit',sans-serif;color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track{background:#f0f0f0;}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px;}
+
+/* ── TYPOGRAPHY ── */
+.sec-eyebrow{font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:.5rem;margin-bottom:1rem;}
+.sec-eyebrow::before{content:'';display:inline-block;width:24px;height:2px;background:var(--gold);flex-shrink:0;}
+.sec-title{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.05;letter-spacing:-.01em;}
+.sec-title-sm{font-size:clamp(2rem,4vw,3rem);}
+.sec-title-md{font-size:clamp(2.4rem,5vw,3.8rem);}
+.divider-gold{width:60px;height:3px;background:linear-gradient(90deg,var(--gold),var(--red));border-radius:4px;margin:1.2rem 0;}
+.divider-gold.centered{margin-left:auto;margin-right:auto;}
+
+/* ── BUTTONS ── */
+.btn-brand-red{display:inline-flex;align-items:center;gap:.5rem;background:var(--red);color:#fff;font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.85rem 2rem;border:none;border-radius:6px;text-decoration:none;cursor:pointer;transition:background var(--trans),transform var(--trans),box-shadow var(--trans);}
+.btn-brand-red:hover{background:var(--red-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(210,35,42,.35);color:#fff;}
+.btn-brand-gold{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold);color:var(--ink);font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.85rem 2rem;border:none;border-radius:6px;text-decoration:none;cursor:pointer;transition:background var(--trans),transform var(--trans),box-shadow var(--trans);}
+.btn-brand-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,175,55,.4);color:var(--ink);}
+.btn-outline-dark{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--ink);font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.82rem 2rem;border:1.5px solid var(--ink);border-radius:6px;text-decoration:none;cursor:pointer;transition:all var(--trans);}
+.btn-outline-dark:hover{background:var(--ink);color:#fff;transform:translateY(-2px);}
+.btn-outline-white{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:#fff;font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.82rem 2rem;border:1.5px solid rgba(255,255,255,.6);border-radius:6px;text-decoration:none;cursor:pointer;transition:all var(--trans);}
+.btn-outline-white:hover{background:rgba(255,255,255,.15);border-color:#fff;color:#fff;transform:translateY(-2px);}
+
+/* ── SCROLL REVEAL ── */
+.sr{opacity:0;transform:translateY(32px);transition:opacity .65s ease,transform .65s ease;}
+.sr.visible{opacity:1;transform:translateY(0);}
+.sr-delay-1{transition-delay:.10s;}.sr-delay-2{transition-delay:.18s;}.sr-delay-3{transition-delay:.26s;}.sr-delay-4{transition-delay:.34s;}
+.sr-left{opacity:0;transform:translateX(-36px);transition:opacity .65s ease,transform .65s ease;}
+.sr-left.visible{opacity:1;transform:translateX(0);}
+.sr-right{opacity:0;transform:translateX(36px);transition:opacity .65s ease,transform .65s ease;}
+.sr-right.visible{opacity:1;transform:translateX(0);}
+
+/* ═══════════════════════════════════════════════════════════
+   TOP BAR
+════════════════════════════════════════════════════════════ */
+#topBar {
+  background: transparent;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-size: .72rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  padding: .4rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  transition: all .4s ease;
+}
+#topBar.scrolled {
+  transform: translateY(-100%);
+}
+body { padding-top: 0; }
+
+/* ═══════════════════════════════════════════════════════════
+   NAVBAR
+════════════════════════════════════════════════════════════ */
+#mainNav {
+  position: fixed;
+  top: 36px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  transition: all .4s ease;
+  padding: 1.2rem 0;
+  background: transparent;
+}
+#mainNav.scrolled {
+  top: 0;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 4px 24px rgba(0,0,0,.08);
+  padding: .7rem 0;
+}
+.nav-logo-img { height: 70px; width: auto; transition: height .3s; }
+#mainNav.scrolled .nav-logo-img { height: 90px; }
+
+.nav-link-custom {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  color: #fff;
+  text-decoration: none;
+  padding: .3rem 0 !important;
+  position: relative;
+  transition: color var(--trans);
+}
+#mainNav.scrolled .nav-link-custom {
+  color: var(--ink) !important;
+}
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width var(--trans);
+  border-radius: 2px;
+}
+.nav-link-custom:hover, .nav-link-custom.active { color: var(--red) !important; }
+.nav-link-custom:hover::after, .nav-link-custom.active::after { width: 100%; }
+
+/* Mobile Toggle Color */
+.mobile-toggle { color: #fff; transition: color var(--trans); }
+#mainNav.scrolled .mobile-toggle { color: var(--ink); }
+  /* ── DROPDOWN MENU ── */
+  .nav-dropdown .dropdown-menu {
+    background: #0F0F0F;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+    padding: .75rem;
+    min-width: 240px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.4);
+    margin-top: 0;
+    backdrop-filter: blur(10px);
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all .3s ease;
+  }
+  @media (min-width: 992px) {
+    .nav-dropdown:hover .dropdown-menu {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .nav-dropdown .dropdown-item {
+  font-family: 'Outfit', sans-serif;
+  font-size: .9rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.8);
+  padding: .75rem 1.2rem;
+  border-radius: 8px;
+  transition: all .3s ease;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+.nav-dropdown .dropdown-item:hover {
+  background: rgba(255,255,255,.05);
+  color: var(--gold);
+  padding-left: 1.5rem;
+}
+
+/* Mobile sub-menu adjustments */
+@media (max-width: 991px) {
+  .mobile-nav-sub { padding-left: 1rem; border-left: 2px solid var(--border); margin-left: 1.5rem; margin-bottom: .5rem; }
+  .mobile-sub-link {
+    display: block;
+    padding: .6rem 0;
+    font-size: .85rem;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  #topBar { display: none; }
+  #mainNav { top: 0; }
+}
+/* Off-canvas mobile menu */
+.offcanvas-start { width: 300px !important; background: var(--white) !important; }
+.offcanvas-header { border-bottom: 1px solid var(--border); padding: 1.5rem; }
+.mobile-nav-link {
+  display: block;
+  font-family: 'Outfit', sans-serif;
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  padding: .9rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  transition: color var(--trans), padding-left var(--trans);
+}
+.mobile-nav-link:hover { color: var(--red); padding-left: 2rem; }
+
+/* ═══════════════════ PAGE HERO ═══════════════════ */
+.page-hero{position:relative;height:490px;display:flex;align-items:flex-end;overflow:hidden;}
+.page-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:brightness(.42);}
+.page-hero-gradient{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.2) 0%,rgba(10,10,10,.2) 65%,transparent 100%);}
+.page-hero-content{position:relative;z-index:2;padding:0 0 3.5rem;width:100%;}
+.breadcrumb-custom{display:flex;align-items:center;gap:.5rem;font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.8rem;}
+.breadcrumb-custom a{color:rgba(255,255,255,.5);text-decoration:none;transition:color var(--trans);}
+.breadcrumb-custom a:hover{color:var(--gold);}
+.breadcrumb-custom .sep{color:rgba(255,255,255,.25);}
+.breadcrumb-custom .current{color:var(--gold);}
+.page-hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:700;color:#fff;line-height:.95;letter-spacing:-.02em;margin:0;}
+.page-hero-title em{color:var(--gold-light);font-style:italic;}
+
+/* ═══════════════════ FILTER BAR ═══════════════════ */
+.filter-section{background:var(--white);border-bottom:1px solid var(--border);position:sticky;top:calc(36px + 68px);z-index:900;box-shadow:0 4px 24px rgba(0,0,0,.05);}
+.filter-inner{display:flex;align-items:center;gap:.45rem;padding:.9rem 0;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;}
+.filter-inner::-webkit-scrollbar{display:none;}
+.filter-btn{font-family:'Outfit',sans-serif;font-size:.76rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;padding:.55rem 1.2rem;border-radius:8px;cursor:pointer;border:1.5px solid var(--border);background:var(--white);color:var(--muted);transition:all var(--trans);display:flex;align-items:center;gap:.4rem;}
+.filter-btn:hover{border-color:rgba(212,175,55,.4);color:var(--ink);background:rgba(212,175,55,.06);}
+.filter-btn.active{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 4px 14px rgba(15,15,15,.25);}
+.filter-count{background:rgba(255,255,255,.15);color:rgba(255,255,255,.7);font-size:.6rem;font-weight:700;padding:.1rem .45rem;border-radius:100px;min-width:20px;text-align:center;}
+.filter-btn:not(.active) .filter-count{background:rgba(0,0,0,.07);color:var(--muted);}
+
+/* ═══════════════════ GALLERY GRID SECTION ═══════════════════ */
+.gallery-section{padding:5rem 0 6rem;background:var(--off-white);}
+
+/* MASONRY via CSS columns */
+.masonry-grid{
+  columns:4;
+  column-gap:12px;
+}
+@media(max-width:1199px){.masonry-grid{columns:3;}}
+@media(max-width:767px) {.masonry-grid{columns:2;}}
+@media(max-width:480px) {.masonry-grid{columns:1;}}
+
+.gallery-item{
+  break-inside:avoid;
+  margin-bottom:12px;
+  position:relative;
+  overflow:hidden;
+  border-radius:10px;
+  cursor:pointer;
+  display:block;
+}
+.gallery-item img{
+  width:100%;
+  display:block;
+  transition:transform .6s cubic-bezier(.23,1,.32,1),filter .4s;
+  filter:brightness(.9) saturate(.9);
+}
+.gallery-item:hover img{transform:scale(1.06);filter:brightness(.65) saturate(1.1);}
+
+/* Overlay */
+.gi-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,10,10,.85) 0%,transparent 55%);
+  opacity:0;transition:opacity .35s;
+  display:flex;flex-direction:column;
+  justify-content:flex-end;padding:1.1rem;
+}
+.gallery-item:hover .gi-overlay{opacity:1;}
+.gi-title{font-family:'Outfit',sans-serif;font-weight:700;font-size:.85rem;color:#fff;margin-bottom:.2rem;line-height:1.3;}
+.gi-cat{font-family:'Outfit',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
+.gi-zoom{position:absolute;top:.8rem;right:.8rem;width:34px;height:34px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem;opacity:0;transform:scale(.8);transition:opacity .3s,transform .3s;}
+.gallery-item:hover .gi-zoom{opacity:1;transform:scale(1);}
+
+/* Category label badge on image */
+.gi-badge{position:absolute;top:.8rem;left:.8rem;font-family:'Outfit',sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.25rem .65rem;border-radius:4px;pointer-events:none;}
+
+/* Tall items */
+.gallery-item.tall img{aspect-ratio:auto;}
+
+/* ═══════════════════ LIGHTBOX ═══════════════════ */
+#lightbox{
+  position:fixed;inset:0;z-index:99999;
+  background:rgba(5,5,5,.97);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;
+  transition:opacity .35s ease;
+  backdrop-filter:blur(4px);
+}
+#lightbox.open{opacity:1;pointer-events:all;}
+#lightbox .lb-inner{
+  position:relative;max-width:90vw;max-height:90vh;
+  display:flex;flex-direction:column;align-items:center;
+}
+#lightbox img{
+  max-width:90vw;max-height:80vh;
+  object-fit:contain;border-radius:8px;
+  box-shadow:0 32px 80px rgba(0,0,0,.7);
+  display:block;
+}
+#lightbox .lb-caption{
+  margin-top:1rem;text-align:center;
+}
+#lightbox .lb-caption-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:#fff;}
+#lightbox .lb-caption-cat{font-family:'Outfit',sans-serif;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:.25rem;}
+#lightbox .lb-close{
+  position:absolute;top:-48px;right:0;
+  width:40px;height:40px;background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1rem;cursor:pointer;
+  transition:background var(--trans);
+}
+#lightbox .lb-close:hover{background:var(--red);}
+#lightbox .lb-arrow{
+  position:fixed;top:50%;transform:translateY(-50%);
+  width:48px;height:48px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.1rem;cursor:pointer;
+  transition:background var(--trans);z-index:2;
+}
+#lightbox .lb-arrow:hover{background:rgba(212,175,55,.25);}
+#lightbox .lb-prev{left:1.5rem;}
+#lightbox .lb-next{right:1.5rem;}
+#lightbox .lb-counter{
+  position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);
+  font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(255,255,255,.45);
+  background:rgba(255,255,255,.07);backdrop-filter:blur(8px);
+  padding:.4rem 1rem;border-radius:100px;
+  border:1px solid rgba(255,255,255,.1);
+}
+
+/* ═══════════════════ VIDEO GALLERY ═══════════════════ */
+.video-section{padding:7rem 0;background:var(--white);}
+.video-card{
+  background:var(--off-white);border-radius:14px;overflow:hidden;
+  border:1px solid var(--border);
+  transition:transform var(--trans),box-shadow var(--trans);
+  height:100%;
+}
+.video-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);}
+.vc-thumb{
+  position:relative;overflow:hidden;
+  height:200px;background:var(--ink);cursor:pointer;
+}
+.vc-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .4s;filter:brightness(.75);}
+.video-card:hover .vc-thumb img{transform:scale(1.04);filter:brightness(.55);}
+.vc-play{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:56px;height:56px;background:rgba(212,175,55,.2);
+  border:2px solid var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:1.2rem;
+  transition:background var(--trans),transform var(--trans);
+  z-index:1;
+}
+.video-card:hover .vc-play{background:rgba(212,175,55,.4);transform:translate(-50%,-50%) scale(1.1);}
+.vc-duration{position:absolute;bottom:.7rem;right:.7rem;background:rgba(10,10,10,.8);color:#fff;font-family:'Outfit',sans-serif;font-size:.65rem;font-weight:700;padding:.2rem .6rem;border-radius:4px;}
+.vc-body{padding:1.3rem 1.4rem;}
+.vc-cat{font-family:'Outfit',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:.35rem;}
+.vc-title{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:1.1rem;color:var(--ink);line-height:1.3;margin-bottom:.3rem;}
+.vc-desc{font-size:.8rem;color:var(--muted);line-height:1.6;}
+
+/* ═══════════════════ AWARDS / EVENTS ═══════════════════ */
+.events-section{padding:7rem 0;background:var(--off-white);}
+.event-card{
+  background:var(--white);border-radius:14px;overflow:hidden;
+  border:1px solid var(--border);
+  display:flex;align-items:stretch;
+  transition:transform var(--trans),box-shadow var(--trans);
+}
+.event-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);}
+.event-img{width:140px;flex-shrink:0;overflow:hidden;}
+.event-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s;filter:grayscale(10%);}
+.event-card:hover .event-img img{transform:scale(1.06);}
+.event-body{padding:1.5rem;flex:1;display:flex;flex-direction:column;justify-content:center;}
+.event-year{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--gold);letter-spacing:.08em;line-height:1;margin-bottom:.3rem;}
+.event-title{font-family:'Outfit',sans-serif;font-weight:700;font-size:.92rem;color:var(--ink);margin-bottom:.35rem;}
+.event-desc{font-size:.8rem;color:var(--muted);line-height:1.65;}
+.event-tag{display:inline-block;margin-top:.6rem;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(212,175,55,.1);color:#8a6800;border:1px solid rgba(212,175,55,.25);padding:.2rem .65rem;border-radius:4px;}
+
+/* ═══════════════════ CTA DARK ═══════════════════ */
+.gallery-cta{padding:6rem 0;background:var(--ink);position:relative;overflow:hidden;text-align:center;}
+.gallery-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(212,175,55,.07) 0%,transparent 60%),radial-gradient(ellipse at 70% 50%,rgba(210,35,42,.06) 0%,transparent 60%);pointer-events:none;}
+.cta-pill{display:inline-block;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.3);color:var(--gold);font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:.35rem 1rem;border-radius:100px;margin-bottom:1.5rem;}
+
+/* ═══════════════════ FLOATING / BTT ═══════════════════ */
+.floating-cta{position:fixed;bottom:2rem;left:2rem;z-index:9990;display:flex;flex-direction:column;gap:.6rem;}
+.floating-btn{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.2);transition:transform var(--trans);}
+.floating-btn:hover{transform:scale(1.12);}
+.floating-wa{background:#25D366;color:#fff;}
+.floating-call{background:var(--red);color:#fff;}
+#backToTop{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;background:var(--red);color:#fff;border:none;border-radius:10px;cursor:pointer;z-index:9990;display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 6px 20px rgba(210,35,42,.4);opacity:0;transform:translateY(20px);transition:all var(--trans);pointer-events:none;}
+#backToTop.visible{opacity:1;transform:translateY(0);pointer-events:all;}
+#backToTop:hover{background:var(--red-dark);transform:translateY(-3px);}
+
+/* ═══════════════════ FOOTER ═══════════════════ */
+#mainFooter{background:var(--ink);color:rgba(255,255,255,.65);padding:6rem 0 0;}
+.footer-brand .f-logo{height:52px;width:auto;margin-bottom:1.2rem;}
+.footer-tagline{font-size:.85rem;line-height:1.75;max-width:260px;color:rgba(255,255,255,.5);margin-bottom:1.5rem;}
+.footer-socials{display:flex;gap:.7rem;}
+.social-btn{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:.9rem;text-decoration:none;transition:all var(--trans);}
+.social-btn:hover{background:var(--gold);border-color:var(--gold);color:var(--ink);transform:translateY(-2px);}
+.footer-heading{font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.4rem;position:relative;padding-bottom:.7rem;}
+.footer-heading::after{content:'';position:absolute;bottom:0;left:0;width:24px;height:2px;background:var(--red);border-radius:2px;}
+.footer-links{list-style:none;padding:0;margin:0;}
+.footer-links li{margin-bottom:.6rem;}
+.footer-links a{color:rgba(255,255,255,.5);text-decoration:none;font-size:.84rem;transition:color var(--trans),padding-left var(--trans);display:inline-block;}
+.footer-links a:hover{color:var(--gold);padding-left:.4rem;}
+.footer-contact-item{display:flex;gap:.8rem;margin-bottom:.9rem;align-items:flex-start;}
+.footer-contact-icon{color:var(--gold);font-size:.9rem;margin-top:.15rem;flex-shrink:0;}
+.footer-contact-text{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.5;}
+.footer-contact-text a{color:rgba(255,255,255,.5);text-decoration:none;transition:color var(--trans);}
+.footer-contact-text a:hover{color:var(--gold);}
+.footer-bottom{margin-top:4rem;padding:1.5rem 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem;}
+.footer-bottom-text{font-size:.78rem;color:rgba(255,255,255,.3);}
+.footer-bottom-links{display:flex;gap:1.5rem;}
+.footer-bottom-links a{font-size:.75rem;color:rgba(255,255,255,.3);text-decoration:none;transition:color var(--trans);}
+.footer-bottom-links a:hover{color:var(--gold);}
+.footer-newsletter{display:flex;}
+.footer-newsletter input{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-right:none;border-radius:6px 0 0 6px;color:#fff;font-size:.82rem;padding:.65rem 1rem;outline:none;font-family:'Outfit',sans-serif;transition:border-color var(--trans);}
+.footer-newsletter input::placeholder{color:rgba(255,255,255,.3);}
+.footer-newsletter input:focus{border-color:rgba(212,175,55,.4);}
+.footer-newsletter button{background:var(--red);border:1px solid var(--red);border-left:none;border-radius:0 6px 6px 0;color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.65rem 1.1rem;cursor:pointer;transition:background var(--trans);white-space:nowrap;}
+.footer-newsletter button:hover{background:var(--red-dark);}
+
+/* Modal */
+.enquiry-modal .modal-content{background:var(--white);border:none;border-radius:18px;overflow:hidden;}
+.enquiry-modal .modal-header{background:var(--ink);padding:1.8rem 2rem;border:none;}
+.enquiry-modal .modal-body{padding:2rem;}
+.form-control-custom{border:1.5px solid var(--border);border-radius:8px;padding:.75rem 1rem;font-family:'Outfit',sans-serif;font-size:.88rem;color:var(--ink);background:var(--white);transition:border-color var(--trans),box-shadow var(--trans);width:100%;outline:none;}
+.form-control-custom:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.12);}
+.form-label-custom{font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem;display:block;}
+
+/* Responsive */
+@media(max-width:767px){
+  .page-hero{height:360px;}
+  .filter-section{top:68px;}
+  .event-card{flex-direction:column;}
+  .event-img{width:100%;height:160px;}
+}
+@media(max-width:575px){
+  #topBar{display:none;}
+  #mainNav{top:0;}
+  body{padding-top:0;}
+  .filter-section{top:68px;}
+}
+</style>
+</head>
+<body>
+
+<!-- FLOATING -->
+<div class="floating-cta" role="complementary" aria-label="Quick contact">
+  <a href="https://wa.me/917840002725" target="_blank" rel="noopener" class="floating-btn floating-wa" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+  <a href="tel:+917840002724" class="floating-btn floating-call" title="Call Us"><i class="bi bi-telephone-fill"></i></a>
+</div>
+<button id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="bi bi-chevron-up"></i></button>
+
+<!-- ════════════════════════════
+     TOP BAR
+════════════════════════════ -->
+<div id="topBar" role="banner" aria-label="Contact information">
+  <div class="container-xl">
+    <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+      <div class="d-flex align-items-center gap-4">
+        <span><i class="bi bi-geo-alt-fill me-1" style="color:var(--gold);"></i>RDC Rajnagar, Ghaziabad, UP 201002</span>
+        <span class="d-none d-md-inline"><i class="bi bi-envelope-fill me-1" style="color:var(--gold);"></i>maacrdcghaziabad@gmail.com</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="tel:+917840002724" style="color:var(--gold);text-decoration:none;font-size:.72rem;font-weight:600;">
+          <i class="bi bi-telephone-fill me-1"></i>+91 784 000 2724
+        </a>
+        <a href="about.html" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:.72rem;" class="d-none d-sm-inline">FAQs</a>
+        <a href="courses.html" style="color:rgba(255,255,255,.6);text-decoration:none;font-size:.72rem;" class="d-none d-sm-inline">All Courses</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     NAVIGATION
+════════════════════════════ -->
+<nav id="mainNav" role="navigation" aria-label="Main navigation">
+  <div class="container-xl">
+    <div class="d-flex align-items-center justify-content-between gap-3">
+
+      <!-- Logo -->
+      <a href="index.html" aria-label="MAAC Ghaziabad RDC – Home">
+        <img src="Images/logo_white.png"
+             alt="MAAC Ghaziabad RDC Logo"
+             class="nav-logo-img"
+             id="navLogo"
+             onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'160\' height=\'50\' viewBox=\'0 0 160 50\'%3E%3Crect width=\'160\' height=\'50\' fill=\'%230F0F0F\'/%3E%3Ctext x=\'10\' y=\'32\' font-family=\'Georgia\' font-size=\'22\' font-weight=\'bold\' fill=\'%23D4AF37\'%3EMAAC%3C/text%3E%3Ctext x=\'60\' y=\'32\' font-family=\'Georgia\' font-size=\'22\' font-weight=\'bold\' fill=\'%23D2232A\'%3E%E2%80%BA%E2%80%BA%E2%80%BA%3C/text%3E%3C/svg%3E'"/>
+      </a>
+
+      <!-- Desktop Links -->
+      <ul class="d-none d-lg-flex align-items-center gap-4 list-unstyled mb-0">
+        <li><a href="index.html" class="nav-link-custom">Home</a></li>
+        <li><a href="about.html" class="nav-link-custom">About</a></li>
+        <li class="nav-item dropdown nav-dropdown">
+          <a class="nav-link-custom dropdown-toggle" href="courses.html" id="navCourses" role="button">
+            Courses <i class="bi bi-chevron-down" style="font-size:.65rem;"></i>
+          </a>
+          <ul class="dropdown-menu fade-up" aria-labelledby="navCourses">
+            <li><a class="dropdown-item" href="course-graphic-design.html">Graphic Design</a></li>
+            <li><a class="dropdown-item" href="course-video-editing.html">Video Editing</a></li>
+            <li><a class="dropdown-item" href="course-game-design.html">Game Design</a></li>
+            <li><a class="dropdown-item" href="course-ar-vr.html">AR & VR</a></li>
+            <li><a class="dropdown-item" href="course-broadcast.html">Broadcast</a></li>
+            <li><a class="dropdown-item" href="course-3d-animation.html">3D Animation</a></li>
+            <li><a class="dropdown-item" href="course-vfx.html">Visual Effects (VFX)</a></li>
+            <li><a class="dropdown-item" href="course-digital-design.html">Digital Design</a></li>
+            <li><a class="dropdown-item" href="course-short-term.html">Short Term Courses</a></li>
+          </ul>
+        </li>
+        <li><a href="placements.html" class="nav-link-custom">Placements</a></li>
+        <li><a href="gallery.html" class="nav-link-custom active" aria-current="page">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link-custom">Contact</a></li>
+        </ul>
+      <!-- CTA + Mobile Toggle -->
+      <div class="d-flex align-items-center gap-3">
+        <a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="btn-brand-red d-none d-md-inline-flex">
+          <i class="bi bi-send"></i> Enquire Now
+        </a>
+        <button class="btn d-lg-none border-0 p-1 mobile-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Open navigation menu" style="background:none;font-size:1.4rem;">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Off-canvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+  <div class="offcanvas-header">
+    <img src="Images/logo_black.png" alt="MAAC Ghaziabad RDC" height="42" id="mobileMenuLogo"
+         onerror="this.onerror=null; this.style.display='none'; document.getElementById('mobileMenuFallback').style.display='block'"/>
+    <span id="mobileMenuFallback" style="display:none;font-family:'Bebas Neue';font-size:1.4rem;color:var(--red);">MAAC Ghaziabad</span>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close menu"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About Us</a>
+    <a href="courses.html" class="mobile-nav-link">Courses</a>
+    <div class="mobile-nav-sub">
+      <a href="course-graphic-design.html" class="mobile-sub-link">Graphic Design</a>
+      <a href="course-video-editing.html" class="mobile-sub-link">Video Editing</a>
+      <a href="course-game-design.html" class="mobile-sub-link">Game Design</a>
+      <a href="course-3d-animation.html" class="mobile-sub-link">3D Animation</a>
+      <a href="course-vfx.html" class="mobile-sub-link">Visual Effects (VFX)</a>
+      <a href="course-digital-design.html" class="mobile-sub-link">Digital Design</a>
+      <a href="course-ar-vr.html" class="mobile-sub-link">AR & VR</a>
+      <a href="course-broadcast.html" class="mobile-sub-link">Broadcast</a>
+      <a href="course-short-term.html" class="mobile-sub-link">Short Term Courses</a>
+    </div>
+    <a href="placements.html" class="mobile-nav-link">Placements</a>
+    <a href="gallery.html" class="mobile-nav-link" style="color:var(--red);">Gallery</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <div style="padding:1.5rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:.8rem;">
+      <a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-bs-dismiss="offcanvas" class="btn-brand-red justify-content-center">
+        <i class="bi bi-send"></i> Enquire Now
+      </a>
+      <a href="tel:+917840002724" class="btn-outline-dark justify-content-center">
+        <i class="bi bi-telephone"></i> Call Us
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     PAGE HERO
+════════════════════════════ -->
+<header class="page-hero" role="banner" aria-labelledby="pageHeroTitle">
+  <img src="Images/banner_gallery.png"
+       alt="MAAC Ghaziabad RDC student gallery — creative work and campus life"
+       class="page-hero-img" loading="eager" fetchpriority="high"/>
+  <div class="page-hero-gradient" aria-hidden="true"></div>
+  <div class="page-hero-content container-xl">
+    <nav class="breadcrumb-custom" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep">›</span>
+      <span class="current" aria-current="page">Gallery</span>
+    </nav>
+    <h1 class="page-hero-title" id="pageHeroTitle">
+      Creative<br/><em>Showcase</em>
+    </h1>
+    <p style="color:rgba(255,255,255,.65);font-size:.95rem;max-width:480px;margin-top:.9rem;line-height:1.75;font-family:'Outfit',sans-serif;">
+      Student work, campus infrastructure, events, and award moments — a window into life at MAAC Ghaziabad RDC.
+    </p>
+  </div>
+</header>
+
+<!-- ════════════════════════════
+     STICKY FILTER BAR
+════════════════════════════ -->
+<div class="filter-section" role="navigation" aria-label="Gallery category filter" id="filterBar">
+  <div class="container-xl">
+    <div class="filter-inner" role="list">
+      <button class="filter-btn active" data-filter="all"       onclick="filterGallery('all')"       aria-pressed="true"  role="listitem"><i class="bi bi-grid-3x3-gap"></i> All <span class="filter-count">28</span></button>
+      <button class="filter-btn"        data-filter="student"   onclick="filterGallery('student')"   aria-pressed="false" role="listitem"><i class="bi bi-mortarboard"></i> Student Work <span class="filter-count">10</span></button>
+      <button class="filter-btn"        data-filter="campus"    onclick="filterGallery('campus')"    aria-pressed="false" role="listitem"><i class="bi bi-building"></i> Campus &amp; Labs <span class="filter-count">8</span></button>
+      <button class="filter-btn"        data-filter="events"    onclick="filterGallery('events')"    aria-pressed="false" role="listitem"><i class="bi bi-trophy"></i> Events &amp; Awards <span class="filter-count">6</span></button>
+      <button class="filter-btn"        data-filter="placement" onclick="filterGallery('placement')" aria-pressed="false" role="listitem"><i class="bi bi-briefcase"></i> Placement Moments <span class="filter-count">4</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     PHOTO GALLERY
+════════════════════════════ -->
+<main class="gallery-section" id="photoGallery" aria-label="Photo gallery">
+  <div class="container-xl">
+
+    <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-4 sr">
+      <div>
+        <span class="sec-eyebrow">Photo Gallery</span>
+        <h2 class="sec-title sec-title-sm" id="galleryHeading">
+          Moments from <span style="color:var(--red);font-style:italic;">Our Campus</span>
+        </h2>
+      </div>
+      <div style="font-family:'Outfit',sans-serif;font-size:.8rem;color:var(--muted);">
+        <span id="visibleCount">28</span> images
+      </div>
+    </div>
+
+    <!-- MASONRY GRID -->
+    <div class="masonry-grid" id="masonryGrid" role="list" aria-label="Gallery images">
+
+      <!-- STUDENT WORK -->
+      <div class="gallery-item" data-category="student" data-title="3D Character Animation" data-cat="Student Work" role="listitem" tabindex="0" aria-label="3D Character Animation student project">
+        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&q=85&fit=crop" alt="3D Character Animation project by MAAC Ghaziabad RDC student" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">3D Character Animation</div>
+          <div class="gi-cat">Student Work · AD3DIGHP</div>
+        </div>
+        <div class="gi-badge" style="background:var(--gold);color:var(--ink);">Student Work</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="student" data-title="VFX Compositing — Sci-Fi Scene" data-cat="Student Work" role="listitem" tabindex="0" aria-label="VFX compositing sci-fi scene by MAAC student">
+        <img src="https://images.unsplash.com/photo-1536431311719-398b6704d4cc?w=600&q=85&fit=crop" alt="VFX compositing and digital effects student project at MAAC Ghaziabad" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">VFX Compositing — Sci-Fi Scene</div>
+          <div class="gi-cat">Student Work · ADVFX Plus</div>
+        </div>
+        <div class="gi-badge" style="background:var(--gold);color:var(--ink);">Student Work</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="campus" data-title="3D Animation Lab — Workstations" data-cat="Campus & Labs" role="listitem" tabindex="0" aria-label="3D animation computer lab at MAAC Ghaziabad RDC">
+        <img src="https://images.unsplash.com/photo-1616578492900-bf9a2a7c7d03?w=600&q=85&fit=crop" alt="High-end 3D animation workstations in MAAC Ghaziabad RDC computer lab" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">3D Animation Lab</div>
+          <div class="gi-cat">Campus &amp; Labs</div>
+        </div>
+        <div class="gi-badge" style="background:#3498db;color:#fff;">Campus</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="student" data-title="Environment Concept Art" data-cat="Student Work" role="listitem" tabindex="0" aria-label="Environment concept art digital painting by MAAC student">
+        <img src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=600&q=85&fit=crop" alt="Digital environment concept art created by MAAC Ghaziabad RDC student" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Environment Concept Art</div>
+          <div class="gi-cat">Student Work · APDMD</div>
+        </div>
+        <div class="gi-badge" style="background:var(--gold);color:var(--ink);">Student Work</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="events" data-title="Creative Plus Award Ceremony" data-cat="Events & Awards" role="listitem" tabindex="0" aria-label="MAAC Creative Plus Award ceremony at Ghaziabad RDC">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=85&fit=crop" alt="MAAC Ghaziabad RDC students receiving Creative Plus Awards at annual ceremony" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Creative Plus Award Ceremony</div>
+          <div class="gi-cat">Events &amp; Awards · 2024</div>
+        </div>
+        <div class="gi-badge" style="background:var(--red);color:#fff;">Awards</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="student" data-title="Game Level Design — UE5" data-cat="Student Work" role="listitem" tabindex="0" aria-label="Unreal Engine 5 game level design by MAAC student">
+        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=85&fit=crop" alt="Unreal Engine 5 game level design environment created by MAAC student" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Game Level — Unreal Engine 5</div>
+          <div class="gi-cat">Student Work · DGWA</div>
+        </div>
+        <div class="gi-badge" style="background:var(--gold);color:var(--ink);">Student Work</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="campus" data-title="Wacom Concept Art Studio" data-cat="Campus & Labs" role="listitem" tabindex="0" aria-label="Wacom Cintiq drawing tablets in MAAC Ghaziabad art studio">
+        <img src="https://images.unsplash.com/photo-1626379953822-baec19c3accd?w=600&q=85&fit=crop" alt="Wacom Cintiq concept art studio with drawing tablets at MAAC Ghaziabad" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Wacom Concept Art Studio</div>
+          <div class="gi-cat">Campus &amp; Labs</div>
+        </div>
+        <div class="gi-badge" style="background:#3498db;color:#fff;">Campus</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="placement" data-title="Placement Drive — Red Chillies" data-cat="Placement Moments" role="listitem" tabindex="0" aria-label="Students being placed at Red Chillies Entertainment during campus drive">
+        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=85&fit=crop" alt="MAAC Ghaziabad students at campus placement drive with Red Chillies Entertainment" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Campus Drive — Red Chillies</div>
+          <div class="gi-cat">Placement Moments · 2024</div>
+        </div>
+        <div class="gi-badge" style="background:#28a745;color:#fff;">Placement</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="student" data-title="Motion Graphics Reel" data-cat="Student Work" role="listitem" tabindex="0" aria-label="Motion graphics and kinetic typography by MAAC student">
+        <img src="https://images.unsplash.com/photo-1614728423169-3f65fd722b7e?w=600&q=85&fit=crop" alt="Motion graphics and title design created in After Effects by MAAC student" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Motion Graphics Reel</div>
+          <div class="gi-cat">Student Work · After Effects</div>
+        </div>
+        <div class="gi-badge" style="background:var(--gold);color:var(--ink);">Student Work</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="campus" data-title="VFX Compositing Suite" data-cat="Campus & Labs" role="listitem" tabindex="0" aria-label="VFX compositing workstations at MAAC Ghaziabad RDC">
+        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=600&q=85&fit=crop" alt="Dual-monitor VFX compositing workstation with Nuke software at MAAC Ghaziabad" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">VFX Compositing Suite</div>
+          <div class="gi-cat">Campus &amp; Labs</div>
+        </div>
+        <div class="gi-badge" style="background:#3498db;color:#fff;">Campus</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="events" data-title="Annual Graduation Showcase" data-cat="Events & Awards" role="listitem" tabindex="0" aria-label="MAAC Ghaziabad annual graduation showcase event">
+        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&q=85&fit=crop" alt="MAAC Ghaziabad RDC annual graduation showcase and convocation event" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Annual Graduation Showcase</div>
+          <div class="gi-cat">Events &amp; Awards · 2023</div>
+        </div>
+        <div class="gi-badge" style="background:var(--red);color:#fff;">Events</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="student" data-title="3D Character Design — ZBrush" data-cat="Student Work" role="listitem" tabindex="0" aria-label="ZBrush character sculpt by MAAC Ghaziabad student">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85&fit=crop" alt="3D character sculpt created in ZBrush by a MAAC Ghaziabad AD3DIGHP student" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Character Design — ZBrush</div>
+          <div class="gi-cat">Student Work · AD3DIGHP</div>
+        </div>
+        <div class="gi-badge" style="background:var(--gold);color:var(--ink);">Student Work</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="campus" data-title="Game Development Lab" data-cat="Campus & Labs" role="listitem" tabindex="0" aria-label="Game development lab with VR headsets at MAAC Ghaziabad">
+        <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=600&q=85&fit=crop" alt="Game development and VR lab with Oculus headsets at MAAC Ghaziabad RDC" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Game Development Lab</div>
+          <div class="gi-cat">Campus &amp; Labs</div>
+        </div>
+        <div class="gi-badge" style="background:#3498db;color:#fff;">Campus</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="student" data-title="Digital Illustration — Photoshop" data-cat="Student Work" role="listitem" tabindex="0" aria-label="Digital illustration painting in Photoshop by MAAC student">
+        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=85&fit=crop" alt="Digital illustration and painting created in Photoshop by MAAC Ghaziabad APDMD student" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Digital Illustration</div>
+          <div class="gi-cat">Student Work · APDMD</div>
+        </div>
+        <div class="gi-badge" style="background:var(--gold);color:var(--ink);">Student Work</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="placement" data-title="Placement Day — Technicolor" data-cat="Placement Moments" role="listitem" tabindex="0" aria-label="Students on placement day with Technicolor offer letters">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=85&fit=crop&facepad=3" alt="MAAC student celebrating placement at Technicolor on campus placement day" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Placement Day — Technicolor</div>
+          <div class="gi-cat">Placement Moments · 2024</div>
+        </div>
+        <div class="gi-badge" style="background:#28a745;color:#fff;">Placement</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="events" data-title="Industry Guest Lecture Series" data-cat="Events & Awards" role="listitem" tabindex="0" aria-label="Industry professionals delivering guest lecture at MAAC Ghaziabad">
+        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=85&fit=crop" alt="Industry VFX professional delivering a masterclass guest lecture at MAAC Ghaziabad" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Industry Guest Lecture Series</div>
+          <div class="gi-cat">Events &amp; Awards · 2024</div>
+        </div>
+        <div class="gi-badge" style="background:var(--red);color:#fff;">Events</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="campus" data-title="Broadcast Edit Suite" data-cat="Campus & Labs" role="listitem" tabindex="0" aria-label="Broadcast video editing suite at MAAC Ghaziabad RDC">
+        <img src="https://images.unsplash.com/photo-1614729939124-032d1e6c9945?w=600&q=85&fit=crop" alt="Professional broadcast video editing suite with DaVinci Resolve at MAAC Ghaziabad" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Broadcast Edit Suite</div>
+          <div class="gi-cat">Campus &amp; Labs</div>
+        </div>
+        <div class="gi-badge" style="background:#3498db;color:#fff;">Campus</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="student" data-title="AR Filter Design — Spark AR" data-cat="Student Work" role="listitem" tabindex="0" aria-label="Augmented reality filter design by MAAC student in Spark AR">
+        <img src="https://images.unsplash.com/photo-1534307671554-9a6d81f4d629?w=600&q=85&fit=crop" alt="Augmented reality filter prototype created in Spark AR by MAAC Ghaziabad student" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">AR Filter Design</div>
+          <div class="gi-cat">Student Work · AR &amp; VR</div>
+        </div>
+        <div class="gi-badge" style="background:var(--gold);color:var(--ink);">Student Work</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="events" data-title="Freshers Orientation 2024" data-cat="Events & Awards" role="listitem" tabindex="0" aria-label="Freshers orientation day at MAAC Ghaziabad RDC 2024">
+        <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=600&q=85&fit=crop" alt="New student orientation day at MAAC Ghaziabad RDC showing the vibrant campus culture" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Freshers Orientation 2024</div>
+          <div class="gi-cat">Events &amp; Awards · 2024</div>
+        </div>
+        <div class="gi-badge" style="background:var(--red);color:#fff;">Events</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="placement" data-title="Offer Letter Day — Tata Elxsi" data-cat="Placement Moments" role="listitem" tabindex="0" aria-label="Students receiving offer letters from Tata Elxsi">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=85&fit=crop&facepad=3" alt="MAAC Ghaziabad student receiving Tata Elxsi offer letter on placement day" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Offer Letter Day — Tata Elxsi</div>
+          <div class="gi-cat">Placement Moments · 2023</div>
+        </div>
+        <div class="gi-badge" style="background:#28a745;color:#fff;">Placement</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="campus" data-title="AR & VR Immersive Lab" data-cat="Campus & Labs" role="listitem" tabindex="0" aria-label="AR and VR immersive experience lab at MAAC Ghaziabad">
+        <img src="https://images.unsplash.com/photo-1487700160041-babef9c3cb55?w=600&q=85&fit=crop" alt="AR and VR immersive design lab with HTC Vive headsets at MAAC Ghaziabad" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">AR &amp; VR Immersive Lab</div>
+          <div class="gi-cat">Campus &amp; Labs</div>
+        </div>
+        <div class="gi-badge" style="background:#3498db;color:#fff;">Campus</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="student" data-title="Architectural Visualisation" data-cat="Student Work" role="listitem" tabindex="0" aria-label="3ds Max architectural visualisation by MAAC student">
+        <img src="https://images.unsplash.com/photo-1627163439134-7a8c47e08208?w=600&q=85&fit=crop" alt="Photorealistic architectural visualisation rendered in 3ds Max and V-Ray by MAAC student" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Architectural Visualisation</div>
+          <div class="gi-cat">Student Work · 3ds Max</div>
+        </div>
+        <div class="gi-badge" style="background:var(--gold);color:var(--ink);">Student Work</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="events" data-title="Portfolio Review Workshop" data-cat="Events & Awards" role="listitem" tabindex="0" aria-label="Portfolio review workshop with industry mentors at MAAC Ghaziabad">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=85&fit=crop" alt="MAAC Ghaziabad portfolio review workshop with students presenting to industry mentors" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Portfolio Review Workshop</div>
+          <div class="gi-cat">Events &amp; Awards · 2024</div>
+        </div>
+        <div class="gi-badge" style="background:var(--red);color:#fff;">Events</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="student" data-title="Brand Identity Design" data-cat="Student Work" role="listitem" tabindex="0" aria-label="Brand identity design project by MAAC APDMD student">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=85&fit=crop" alt="Comprehensive brand identity design project created by MAAC Ghaziabad APDMD student" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Brand Identity Design</div>
+          <div class="gi-cat">Student Work · APDMD</div>
+        </div>
+        <div class="gi-badge" style="background:var(--gold);color:var(--ink);">Student Work</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="campus" data-title="Faculty Mentoring Session" data-cat="Campus & Labs" role="listitem" tabindex="0" aria-label="Faculty mentor reviewing student work at MAAC Ghaziabad">
+        <img src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=600&q=85&fit=crop&facepad=3" alt="MAAC Ghaziabad faculty mentor reviewing 3D animation work with a student" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Faculty Mentoring Session</div>
+          <div class="gi-cat">Campus &amp; Labs</div>
+        </div>
+        <div class="gi-badge" style="background:#3498db;color:#fff;">Campus</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="placement" data-title="Mass Placement Drive 2023" data-cat="Placement Moments" role="listitem" tabindex="0" aria-label="Mass campus placement drive 2023 at MAAC Ghaziabad RDC">
+        <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600&q=85&fit=crop&crop=bottom" alt="Large-scale campus placement drive at MAAC Ghaziabad RDC with multiple hiring companies" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Mass Placement Drive 2023</div>
+          <div class="gi-cat">Placement Moments · 2023</div>
+        </div>
+        <div class="gi-badge" style="background:#28a745;color:#fff;">Placement</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="student" data-title="Particle Simulation — Houdini" data-cat="Student Work" role="listitem" tabindex="0" aria-label="Houdini particle simulation by MAAC VFX student">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=85&fit=crop&crop=top" alt="Houdini particle FX and simulation created by MAAC Ghaziabad ADVFX Plus student" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Particle FX — Houdini</div>
+          <div class="gi-cat">Student Work · ADVFX Plus</div>
+        </div>
+        <div class="gi-badge" style="background:var(--gold);color:var(--ink);">Student Work</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="campus" data-title="Student Collaboration Space" data-cat="Campus & Labs" role="listitem" tabindex="0" aria-label="Open collaboration and review space at MAAC Ghaziabad">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&q=85&fit=crop" alt="Open student collaboration space and review lounge at MAAC Ghaziabad RDC centre" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">Student Collaboration Space</div>
+          <div class="gi-cat">Campus &amp; Labs</div>
+        </div>
+        <div class="gi-badge" style="background:#3498db;color:#fff;">Campus</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="events" data-title="MAAC Animation Excellence Award" data-cat="Events & Awards" role="listitem" tabindex="0" aria-label="MAAC Animation Excellence Award ceremony at Ghaziabad">
+        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80&fit=crop&crop=top" alt="Students receiving MAAC Animation Excellence Award at annual prize distribution ceremony" loading="lazy"/>
+        <div class="gi-overlay">
+          <div class="gi-title">MAAC Excellence Award</div>
+          <div class="gi-cat">Events &amp; Awards · 2023</div>
+        </div>
+        <div class="gi-badge" style="background:var(--red);color:#fff;">Awards</div>
+        <div class="gi-zoom"><i class="bi bi-arrows-fullscreen"></i></div>
+      </div>
+
+    </div>
+    <!-- /masonry grid -->
+
+    <!-- No results -->
+    <div id="noResults" style="display:none;text-align:center;padding:4rem 1rem;">
+      <i class="bi bi-search" style="font-size:3rem;color:var(--muted-2);display:block;margin-bottom:1rem;"></i>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;">No images found</div>
+      <div style="color:var(--muted);font-size:.9rem;margin-top:.4rem;">Try a different category.</div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ════════════════════════════
+     LIGHTBOX OVERLAY
+════════════════════════════ -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <div class="lb-inner">
+    <button class="lb-close" aria-label="Close lightbox" onclick="closeLightbox()"><i class="bi bi-x-lg"></i></button>
+    <img id="lbImg" src="" alt=""/>
+    <div class="lb-caption">
+      <div class="lb-caption-title" id="lbTitle"></div>
+      <div class="lb-caption-cat" id="lbCat"></div>
+    </div>
+  </div>
+  <button class="lb-arrow lb-prev" aria-label="Previous image" onclick="lbNav(-1)"><i class="bi bi-chevron-left"></i></button>
+  <button class="lb-arrow lb-next" aria-label="Next image" onclick="lbNav(1)"><i class="bi bi-chevron-right"></i></button>
+  <div class="lb-counter" id="lbCounter" aria-live="polite">1 / 28</div>
+</div>
+
+<!-- ════════════════════════════
+     VIDEO GALLERY
+════════════════════════════ -->
+<section class="video-section" id="videoGallery" aria-labelledby="videoHeading">
+  <div class="container-xl">
+
+    <div class="text-center mb-5 sr">
+      <span class="sec-eyebrow">Video Gallery</span>
+      <h2 class="sec-title sec-title-sm" id="videoHeading">
+        Student Reels &amp; <span style="color:var(--red);font-style:italic;">Studio Highlights</span>
+      </h2>
+      <div class="divider-gold centered"></div>
+      <p style="max-width:480px;margin:0 auto;color:var(--muted);font-size:.9rem;line-height:1.75;">
+        Watch student showreels, campus tours, placement celebration videos, and highlights from our annual events.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-sm-6 col-lg-4 sr sr-delay-1">
+        <div class="video-card">
+          <div class="vc-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ','Batch 2024 — 3D Animation Showreel')">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&q=80&fit=crop" alt="Batch 2024 3D Animation Showreel thumbnail — MAAC Ghaziabad RDC students" loading="lazy"/>
+            <div class="vc-play"><i class="bi bi-play-fill"></i></div>
+            <div class="vc-duration">4:32</div>
+          </div>
+          <div class="vc-body">
+            <div class="vc-cat">3D Animation</div>
+            <div class="vc-title">Batch 2024 — AD3DIGHP Showreel</div>
+            <div class="vc-desc">Highlights from the graduating batch of 2024 — character animation, rigging, lighting, and cinematic renders from the flagship programme.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4 sr sr-delay-2">
+        <div class="video-card">
+          <div class="vc-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ','VFX Compositing Highlights 2024')">
+            <img src="https://images.unsplash.com/photo-1536431311719-398b6704d4cc?w=600&q=80&fit=crop" alt="VFX compositing highlights reel thumbnail from MAAC Ghaziabad ADVFX students" loading="lazy"/>
+            <div class="vc-play"><i class="bi bi-play-fill"></i></div>
+            <div class="vc-duration">3:15</div>
+          </div>
+          <div class="vc-body">
+            <div class="vc-cat">Visual Effects</div>
+            <div class="vc-title">ADVFX Plus — Compositing Highlights</div>
+            <div class="vc-desc">Pre-viz, particle simulations, digital matte painting, and final composites from our advanced VFX cohort — ready for studio submission.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4 sr sr-delay-3">
+        <div class="video-card">
+          <div class="vc-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ','Campus Tour — MAAC Ghaziabad RDC')">
+            <img src="https://images.unsplash.com/photo-1616578492900-bf9a2a7c7d03?w=600&q=80&fit=crop" alt="MAAC Ghaziabad RDC campus tour video thumbnail showing labs and facilities" loading="lazy"/>
+            <div class="vc-play"><i class="bi bi-play-fill"></i></div>
+            <div class="vc-duration">5:48</div>
+          </div>
+          <div class="vc-body">
+            <div class="vc-cat">Campus Tour</div>
+            <div class="vc-title">Full Campus Tour — MAAC Ghaziabad</div>
+            <div class="vc-desc">A complete walkthrough of all our studios — 3D labs, VFX suites, Wacom studios, the game dev lab, broadcast suite, and the AR/VR immersive room.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4 sr sr-delay-1">
+        <div class="video-card">
+          <div class="vc-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ','Game Design Showcase — DGWA 2024')">
+            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&q=80&fit=crop" alt="DGWA game design showcase 2024 from MAAC Ghaziabad students thumbnail" loading="lazy"/>
+            <div class="vc-play"><i class="bi bi-play-fill"></i></div>
+            <div class="vc-duration">6:10</div>
+          </div>
+          <div class="vc-body">
+            <div class="vc-cat">Game Design</div>
+            <div class="vc-title">DGWA 2024 — Game Showcase</div>
+            <div class="vc-desc">Level design walkthroughs, environment art breakdowns, and real-time gameplay demos from our Unreal Engine 5 and Unity game design students.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4 sr sr-delay-2">
+        <div class="video-card">
+          <div class="vc-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ','Placement Success Stories 2024')">
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&q=80&fit=crop" alt="MAAC Ghaziabad placement success stories 2024 video thumbnail with alumni interviews" loading="lazy"/>
+            <div class="vc-play"><i class="bi bi-play-fill"></i></div>
+            <div class="vc-duration">8:22</div>
+          </div>
+          <div class="vc-body">
+            <div class="vc-cat">Placements</div>
+            <div class="vc-title">Placement Stories — Class of 2024</div>
+            <div class="vc-desc">Hear directly from students placed at Red Chillies, Technicolor, and Dhruva Interactive — their journey from enrolment to offer letter.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4 sr sr-delay-3">
+        <div class="video-card">
+          <div class="vc-thumb" onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ','Creative Plus Awards Ceremony 2024')">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&q=80&fit=crop" alt="Creative Plus Awards Ceremony 2024 at MAAC Ghaziabad RDC thumbnail" loading="lazy"/>
+            <div class="vc-play"><i class="bi bi-play-fill"></i></div>
+            <div class="vc-duration">12:05</div>
+          </div>
+          <div class="vc-body">
+            <div class="vc-cat">Events &amp; Awards</div>
+            <div class="vc-title">Creative Plus Awards Ceremony 2024</div>
+            <div class="vc-desc">Full highlights from MAAC's annual Creative Plus Awards — celebrating outstanding student projects and recognising exceptional creative talent.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Video Modal -->
+<div class="modal fade" id="videoModal" tabindex="-1" aria-modal="true" role="dialog" aria-label="Video player">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-black border-0" style="border-radius:14px;overflow:hidden;">
+      <div class="modal-header border-0" style="padding:.8rem 1.2rem;">
+        <div id="videoModalTitle" style="font-family:'Outfit',sans-serif;font-size:.85rem;font-weight:600;color:rgba(255,255,255,.7);letter-spacing:.06em;"></div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close video" onclick="stopVideo()"></button>
+      </div>
+      <div style="position:relative;padding-bottom:56.25%;height:0;">
+        <iframe id="videoFrame" src="" frameborder="0" allow="autoplay;encrypted-media;fullscreen" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     EVENTS & AWARDS TIMELINE
+════════════════════════════ -->
+<section class="events-section" id="eventsSection" aria-labelledby="eventsHeading">
+  <div class="container-xl">
+
+    <div class="text-center mb-5 sr">
+      <span class="sec-eyebrow">Milestones &amp; Events</span>
+      <h2 class="sec-title sec-title-sm" id="eventsHeading">
+        Celebrations of <span style="color:var(--red);font-style:italic;">Creative Excellence</span>
+      </h2>
+      <div class="divider-gold centered"></div>
+    </div>
+
+    <div class="row g-3">
+
+      <div class="col-md-6 sr sr-delay-1">
+        <div class="event-card">
+          <div class="event-img">
+            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&q=80&fit=crop" alt="MAAC Creative Plus Awards 2024 event banner" loading="lazy"/>
+          </div>
+          <div class="event-body">
+            <div class="event-year">2024</div>
+            <div class="event-title">Creative Plus Awards — National Finalists</div>
+            <div class="event-desc">Three MAAC Ghaziabad RDC students selected as national finalists at the MAAC Creative Plus Awards — competing against entries from 50+ centres across India.</div>
+            <span class="event-tag">National Award</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 sr sr-delay-2">
+        <div class="event-card">
+          <div class="event-img">
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&q=80&fit=crop" alt="MAAC Ghaziabad convocation 2024 batch graduation event" loading="lazy"/>
+          </div>
+          <div class="event-body">
+            <div class="event-year">2024</div>
+            <div class="event-title">Annual Graduation Showcase 2024</div>
+            <div class="event-desc">Over 120 students presented final showreels and projects at the annual showcase — attended by faculty, industry guests, and hiring partners from 12 studios.</div>
+            <span class="event-tag">Annual Showcase</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 sr sr-delay-1">
+        <div class="event-card">
+          <div class="event-img">
+            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&q=80&fit=crop" alt="Industry masterclass session at MAAC Ghaziabad RDC" loading="lazy"/>
+          </div>
+          <div class="event-body">
+            <div class="event-year">2024</div>
+            <div class="event-title">VFX Industry Masterclass Series</div>
+            <div class="event-desc">Six masterclasses delivered by senior artists from Red Chillies, Prime Focus, and Technicolor — covering compositing, simulation, and pipeline workflows.</div>
+            <span class="event-tag">Masterclass</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 sr sr-delay-2">
+        <div class="event-card">
+          <div class="event-img">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&q=80&fit=crop" alt="MAAC Ghaziabad RDC portfolio review workshop with students and mentors" loading="lazy"/>
+          </div>
+          <div class="event-body">
+            <div class="event-year">2023</div>
+            <div class="event-title">Portfolio Sprint Workshop</div>
+            <div class="event-desc">An intensive 2-day workshop where students received individual portfolio critiques from working professionals — resulting in measurable improvements in placement rates.</div>
+            <span class="event-tag">Workshop</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 sr sr-delay-1">
+        <div class="event-card">
+          <div class="event-img">
+            <img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=400&q=80&fit=crop" alt="MAAC Ghaziabad freshers orientation 2024 with new students" loading="lazy"/>
+          </div>
+          <div class="event-body">
+            <div class="event-year">2024</div>
+            <div class="event-title">Freshers Orientation &amp; Lab Induction</div>
+            <div class="event-desc">New students officially inducted into MAAC's creative community — studio tours, meet the faculty sessions, and a preview of the industry connections waiting at the other end.</div>
+            <span class="event-tag">Orientation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 sr sr-delay-2">
+        <div class="event-card">
+          <div class="event-img">
+            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&q=80&fit=crop" alt="MAAC Ghaziabad 2023 placement day celebrations with students and partners" loading="lazy"/>
+          </div>
+          <div class="event-body">
+            <div class="event-year">2023</div>
+            <div class="event-title">Record Placement Day 2023</div>
+            <div class="event-desc">Our highest single-day placement achievement — 34 offer letters handed out across 8 studios in a single campus placement drive. A milestone we're incredibly proud of.</div>
+            <span class="event-tag">Record Achievement</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     CTA
+════════════════════════════ -->
+<section class="gallery-cta" aria-labelledby="galleryCtaHeading">
+  <div class="container-xl position-relative">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 col-xl-6 text-center sr">
+        <span class="cta-pill"><i class="bi bi-stars me-1"></i> Admissions Open — 2025</span>
+        <h2 class="sec-title sec-title-md text-white" id="galleryCtaHeading" style="margin-bottom:1.2rem;">
+          Your Work Could Be<br/><em style="color:var(--gold-light);">Featured Here</em>
+        </h2>
+        <p style="font-size:.95rem;color:rgba(255,255,255,.6);max-width:440px;margin:0 auto 2.2rem;line-height:1.8;">
+          Every piece in this gallery started with a student who walked in through our door with a dream and a sketchbook.
+          The studios, the reels, the awards — it all begins with your first class.
+        </p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="btn-brand-gold" style="padding:1rem 2.4rem;">
+            <i class="bi bi-send-fill"></i> Book Free Demo Class
+          </a>
+          <a href="courses.html" class="btn-outline-white" style="padding:1rem 2.4rem;">
+            <i class="bi bi-collection"></i> Explore Courses
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════
+     FOOTER
+════════════════════════════ -->
+<footer id="mainFooter" role="contentinfo" aria-labelledby="footerLabel">
+  <h2 id="footerLabel" class="visually-hidden">Footer</h2>
+  <div class="container-xl">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-brand">
+          <img src="/mnt/user-data/uploads/logo_white.png" alt="MAAC Ghaziabad RDC" class="f-logo" onerror="this.style.display='none'"/>
+          <p class="footer-tagline">Maya Academy of Advanced Creativity — India's premier institute for Animation, VFX, Gaming &amp; Design. Ghaziabad RDC centre.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <h3 class="footer-heading">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">All Courses</a></li>
+          <li><a href="placements.html">Placements</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <h3 class="footer-heading">Programmes</h3>
+        <ul class="footer-links">
+          <li><a href="courses.html#vfx">ADVFX Plus</a></li>
+          <li><a href="courses.html#3d">AD3DIGHP</a></li>
+          <li><a href="courses.html#3d">D3D / DAFM</a></li>
+          <li><a href="courses.html#game">DGWA</a></li>
+          <li><a href="courses.html#graphics">APDMD</a></li>
+          <li><a href="courses.html#short">Short-Term</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <h3 class="footer-heading">Get in Touch</h3>
+        <address style="font-style:normal;">
+          <div class="footer-contact-item"><i class="bi bi-geo-alt-fill footer-contact-icon"></i><div class="footer-contact-text">RDC Rajnagar, Ghaziabad, UP – 201002</div></div>
+          <div class="footer-contact-item"><i class="bi bi-telephone-fill footer-contact-icon"></i><div class="footer-contact-text"><a href="tel:+917840002724">+91 784 000 2724</a> / <a href="tel:+917840002725">2725</a></div></div>
+          <div class="footer-contact-item"><i class="bi bi-envelope-fill footer-contact-icon"></i><div class="footer-contact-text"><a href="mailto:maacrdcghaziabad@gmail.com">maacrdcghaziabad@gmail.com</a></div></div>
+          <div class="footer-contact-item"><i class="bi bi-clock-fill footer-contact-icon"></i><div class="footer-contact-text">Mon–Sat: 9:00 AM – 7:00 PM</div></div>
+        </address>
+        <h4 class="footer-heading mt-4">Stay Updated</h4>
+        <div class="footer-newsletter">
+          <input type="email" placeholder="Your email address" aria-label="Newsletter email"/>
+          <button type="button">Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">© 2025 MAAC Ghaziabad RDC. All rights reserved. | NSDC &amp; MESC Affiliated.</div>
+      <nav class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sitemap</a></nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════
+     ENQUIRY MODAL
+════════════════════════════ -->
+<div class="modal fade enquiry-modal" id="enquiryModal" tabindex="-1" aria-modal="true" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <img src="/mnt/user-data/uploads/logo_white.png" alt="MAAC Ghaziabad RDC" height="36" onerror="this.style.display='none'"/>
+          <div style="color:rgba(255,255,255,.5);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-top:.4rem;">Request a Free Counselling</div>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-4">
+          <div class="col-lg-5 d-none d-lg-flex flex-column justify-content-center" style="background:var(--off-white);border-radius:12px;padding:2rem;">
+            <span class="sec-eyebrow" style="margin-bottom:.8rem;">Start Creating</span>
+            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;margin-bottom:1rem;">Your work could be <span style="color:var(--red);font-style:italic;">in this gallery.</span></h3>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.7rem;">
+              <li style="font-size:.84rem;color:var(--muted);display:flex;align-items:center;gap:.6rem;"><i class="bi bi-check-circle-fill" style="color:var(--gold);"></i> Free demo class</li>
+              <li style="font-size:.84rem;color:var(--muted);display:flex;align-items:center;gap:.6rem;"><i class="bi bi-check-circle-fill" style="color:var(--gold);"></i> Course selection guidance</li>
+              <li style="font-size:.84rem;color:var(--muted);display:flex;align-items:center;gap:.6rem;"><i class="bi bi-check-circle-fill" style="color:var(--gold);"></i> Fee &amp; EMI information</li>
+              <li style="font-size:.84rem;color:var(--muted);display:flex;align-items:center;gap:.6rem;"><i class="bi bi-check-circle-fill" style="color:var(--gold);"></i> 100% placement assistance</li>
+              <li style="font-size:.84rem;color:var(--muted);display:flex;align-items:center;gap:.6rem;"><i class="bi bi-check-circle-fill" style="color:var(--gold);"></i> Callback within 24 hours</li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <form id="enquiryForm" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6"><label class="form-label-custom" for="enqFirst">First Name *</label><input type="text" id="enqFirst" class="form-control-custom" placeholder="Rahul" required autocomplete="given-name"/></div>
+                <div class="col-sm-6"><label class="form-label-custom" for="enqLast">Last Name *</label><input type="text" id="enqLast" class="form-control-custom" placeholder="Sharma" required autocomplete="family-name"/></div>
+                <div class="col-sm-6"><label class="form-label-custom" for="enqPhone">Phone *</label><input type="tel" id="enqPhone" class="form-control-custom" placeholder="+91 98765 43210" required autocomplete="tel"/></div>
+                <div class="col-sm-6"><label class="form-label-custom" for="enqEmail">Email</label><input type="email" id="enqEmail" class="form-control-custom" placeholder="rahul@email.com" autocomplete="email"/></div>
+                <div class="col-12">
+                  <label class="form-label-custom" for="enqCourse">Course of Interest *</label>
+                  <select id="enqCourse" class="form-control-custom" required style="cursor:pointer;">
+                    <option value="">Select a programme...</option>
+                    <option>VFX — ADVFX Plus</option>
+                    <option>3D Animation — AD3DIGHP</option>
+                    <option>3D Animation — D3D</option>
+                    <option>Film Making — DAFM</option>
+                    <option>Game Design — DGWA</option>
+                    <option>Graphic &amp; Media — APDMD</option>
+                    <option>Video Editing</option>
+                    <option>AR &amp; VR Design</option>
+                    <option>Broadcast &amp; TV Production</option>
+                    <option>Digital Design</option>
+                    <option>Short-Term: Autodesk Maya</option>
+                    <option>Short-Term: 3ds Max</option>
+                    <option>Short-Term: After Effects</option>
+                    <option>Not Sure — Need Guidance</option>
+                  </select>
+                </div>
+                <div class="col-12"><label class="form-label-custom" for="enqMsg">Message</label><textarea id="enqMsg" class="form-control-custom" rows="2" placeholder="Any questions…" style="resize:none;"></textarea></div>
+                <div class="col-12">
+                  <button type="submit" class="btn-brand-red w-100 justify-content-center" style="padding:1rem;"><i class="bi bi-send-fill"></i> Submit — Get Free Callback</button>
+                  <div style="font-size:.72rem;color:var(--muted-2);text-align:center;margin-top:.6rem;">No spam. Callback within 24 hours.</div>
+                </div>
+              </div>
+            </form>
+            <div id="enquirySuccess" class="text-center" style="display:none;padding:3rem 1rem;">
+              <i class="bi bi-check-circle-fill" style="font-size:3.5rem;color:var(--gold);display:block;margin-bottom:1rem;"></i>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;margin-bottom:.5rem;">Thank You!</h3>
+              <p style="color:var(--muted);font-size:.9rem;">Our counsellor will call you within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     SCRIPTS
+════════════════════════════ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  /* ── NAV SCROLL BEHAVIOR ── */
+  const nav = document.getElementById('mainNav');
+  const topBar = document.getElementById('topBar');
+  const navLogo = document.getElementById('navLogo');
+  const logoWhite = 'Images/logo_white.png';
+  const logoBlack = 'Images/logo_black.png';
+
+  function handleNavScroll() {
+    if (window.scrollY > 60) {
+      nav.classList.add('scrolled');
+      if (topBar) topBar.classList.add('scrolled');
+      if (navLogo) navLogo.src = logoBlack;
+    } else {
+      nav.classList.remove('scrolled');
+      if (topBar) topBar.classList.remove('scrolled');
+      if (navLogo) navLogo.src = logoWhite;
+    }
+  }
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+  handleNavScroll();
+
+  /* ── BACK TO TOP ── */
+  const btt = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) btt.classList.add('visible');
+    else btt.classList.remove('visible');
+  }, { passive: true });
+
+  /* ── SCROLL REVEAL ── */
+  const srObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); srObs.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.sr, .sr-left, .sr-right').forEach(el => srObs.observe(el));
+
+  /* ─────────────────────────────────────
+     GALLERY FILTER
+  ───────────────────────────────────── */
+  window.filterGallery = function (filter) {
+    document.querySelectorAll('.filter-btn').forEach(b => {
+      const active = b.dataset.filter === filter;
+      b.classList.toggle('active', active);
+      b.setAttribute('aria-pressed', active);
+    });
+
+    const items = document.querySelectorAll('.gallery-item');
+    let visible = 0;
+
+    items.forEach(item => {
+      const show = filter === 'all' || item.dataset.category === filter;
+      item.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    document.getElementById('visibleCount').textContent = visible;
+    document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+  };
+
+  /* ─────────────────────────────────────
+     LIGHTBOX
+  ───────────────────────────────────── */
+  const lb          = document.getElementById('lightbox');
+  const lbImg       = document.getElementById('lbImg');
+  const lbTitle     = document.getElementById('lbTitle');
+  const lbCat       = document.getElementById('lbCat');
+  const lbCounter   = document.getElementById('lbCounter');
+  let lbIndex       = 0;
+  let lbItems       = [];
+
+  function buildLbItems() {
+    lbItems = [...document.querySelectorAll('.gallery-item:not([style*="display: none"])')];
+  }
+
+  function openLightbox(item) {
+    buildLbItems();
+    lbIndex = lbItems.indexOf(item);
+    showLbSlide(lbIndex);
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showLbSlide(i) {
+    const item = lbItems[i];
+    if (!item) return;
+    const img = item.querySelector('img');
+    lbImg.src = img.src.replace('w=600', 'w=1400').replace('&q=85', '&q=95');
+    lbImg.alt = img.alt;
+    lbTitle.textContent = item.dataset.title || '';
+    lbCat.textContent   = item.dataset.cat   || '';
+    lbCounter.textContent = (i + 1) + ' / ' + lbItems.length;
+    lbIndex = i;
+  }
+
+  window.closeLightbox = function () {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  };
+
+  window.lbNav = function (dir) {
+    let next = lbIndex + dir;
+    if (next < 0) next = lbItems.length - 1;
+    if (next >= lbItems.length) next = 0;
+    showLbSlide(next);
+  };
+
+  /* Attach click to all gallery items */
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => openLightbox(item));
+    item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLightbox(item); } });
+  });
+
+  /* Close on backdrop click */
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+
+  /* Keyboard navigation */
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')     { closeLightbox(); }
+    if (e.key === 'ArrowRight') { lbNav(1); }
+    if (e.key === 'ArrowLeft')  { lbNav(-1); }
+  });
+
+  /* ─────────────────────────────────────
+     VIDEO MODAL
+  ───────────────────────────────────── */
+  window.openVideoModal = function (url, title) {
+    document.getElementById('videoFrame').src = url + '?autoplay=1&rel=0';
+    document.getElementById('videoModalTitle').textContent = title || '';
+    const modal = new bootstrap.Modal(document.getElementById('videoModal'));
+    modal.show();
+  };
+  window.stopVideo = function () {
+    document.getElementById('videoFrame').src = '';
+  };
+  document.getElementById('videoModal').addEventListener('hidden.bs.modal', stopVideo);
+
+  /* ─────────────────────────────────────
+     ENQUIRY FORM
+  ───────────────────────────────────── */
+  const form = document.getElementById('enquiryForm');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      let ok = true;
+      this.querySelectorAll('[required]').forEach(f => {
+        if (!f.value.trim()) { f.style.borderColor = 'var(--red)'; ok = false; setTimeout(() => f.style.borderColor = '', 2500); }
+      });
+      if (!ok) return;
+      form.style.opacity = '.4'; form.style.pointerEvents = 'none';
+      setTimeout(() => { form.style.display = 'none'; document.getElementById('enquirySuccess').style.display = 'block'; }, 900);
+    });
+  }
+
+  /* Newsletter */
+  document.querySelectorAll('.footer-newsletter button').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const inp = this.previousElementSibling;
+      if (inp && inp.value.includes('@')) {
+        const orig = this.textContent;
+        this.textContent = '✓ Done!'; this.style.background = 'var(--gold)'; this.style.color = 'var(--ink)';
+        inp.value = '';
+        setTimeout(() => { this.textContent = orig; this.style.background = ''; this.style.color = ''; }, 3000);
+      }
+    });
+  });
+
+  /* Smooth anchor */
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href.startsWith('#enquiry') || href.startsWith('#video')) return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 24, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* Check hash on load for direct category jump */
+  if (window.location.hash) {
+    const validCats = ['student', 'campus', 'events', 'placement'];
+    const h = window.location.hash.replace('#', '');
+    if (validCats.includes(h)) setTimeout(() => filterGallery(h), 300);
+  }
+
+})();
+</script>
+</body>
+</html>

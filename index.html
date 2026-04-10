@@ -243,15 +243,15 @@
 
   /* ── SCROLL REVEAL ── */
   .sr { opacity: 0; transform: translateY(36px); transition: opacity .7s ease, transform .7s ease; }
-  .sr.visible { opacity: 1; transform: translateY(0); }
+  .sr.visible { opacity: 1; transform: none !important; }
   .sr-delay-1 { transition-delay: .1s; }
   .sr-delay-2 { transition-delay: .2s; }
   .sr-delay-3 { transition-delay: .3s; }
   .sr-delay-4 { transition-delay: .4s; }
   .sr-left { opacity: 0; transform: translateX(-40px); transition: opacity .7s ease, transform .7s ease; }
-  .sr-left.visible { opacity: 1; transform: translateX(0); }
+  .sr-left.visible { opacity: 1; transform: none !important; }
   .sr-right { opacity: 0; transform: translateX(40px); transition: opacity .7s ease, transform .7s ease; }
-  .sr-right.visible { opacity: 1; transform: translateX(0); }
+  .sr-right.visible { opacity: 1; transform: none !important; }
 
   /* ═══════════════════════════════════════════════════════════
      NAVBAR
@@ -315,28 +315,57 @@
   .mobile-toggle { color: #fff; transition: color var(--trans); }
   #mainNav.scrolled .mobile-toggle { color: var(--ink); }
 
-  /* Dropdown */
+  /* ── DROPDOWN MENU ── */
   .nav-dropdown .dropdown-menu {
-    background: var(--glass-bg);
-    backdrop-filter: var(--glass-blur);
-    -webkit-backdrop-filter: var(--glass-blur);
-    border: 1px solid rgba(0,0,0,.08);
-    border-radius: 10px;
-    box-shadow: var(--shadow-lg);
-    padding: .5rem;
-    min-width: 220px;
-    margin-top: .8rem;
+    background: #0F0F0F;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+    padding: .75rem;
+    min-width: 240px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.4);
+    margin-top: 0;
+    backdrop-filter: blur(10px);
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all .3s ease;
+  }
+  @media (min-width: 992px) {
+    .nav-dropdown:hover .dropdown-menu {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   .nav-dropdown .dropdown-item {
     font-family: 'Outfit', sans-serif;
-    font-size: .82rem;
+    font-size: .9rem;
     font-weight: 500;
-    color: var(--ink);
-    padding: .6rem 1rem;
-    border-radius: 6px;
-    transition: background var(--trans), color var(--trans);
+    color: rgba(255,255,255,.8);
+    padding: .75rem 1.2rem;
+    border-radius: 8px;
+    transition: all .3s ease;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
   }
-  .nav-dropdown .dropdown-item:hover { background: rgba(212,175,55,.12); color: var(--red); }
+  .nav-dropdown .dropdown-item:hover {
+    background: rgba(255,255,255,.05);
+    color: var(--gold);
+    padding-left: 1.5rem;
+  }
+
+  /* Mobile sub-menu adjustments */
+  @media (max-width: 991px) {
+    .mobile-nav-sub { padding-left: 1rem; border-left: 2px solid var(--border); margin-left: 1.5rem; margin-bottom: .5rem; }
+    .mobile-sub-link {
+      display: block;
+      padding: .6rem 0;
+      font-size: .85rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+  }
 
   /* Off-canvas mobile menu */
   .offcanvas-start { width: 300px !important; background: var(--white) !important; }
@@ -399,6 +428,22 @@
     transition: transform 8s ease !important;
   }
   #heroCarousel .carousel-item.active img { transform: scale(1); }
+
+  /* Carousel Progress Bar */
+  .carousel-progress-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255,255,255,.1);
+    z-index: 10;
+  }
+  .carousel-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: var(--gold);
+  }
 
   /* Custom fade transition */
   #heroCarousel.carousel-fade .carousel-item {
@@ -602,13 +647,19 @@
   .stat-card {
     background: var(--white);
     border-radius: 14px;
-    padding: 2.2rem 2rem;
+    padding: 2rem 1rem;
     text-align: center;
     box-shadow: 0 4px 24px rgba(0,0,0,.06);
     border: 1px solid rgba(0,0,0,.04);
     position: relative;
     overflow: hidden;
     transition: transform var(--trans), box-shadow var(--trans);
+    height: 100%;
+  }
+  @media (max-width: 767px) {
+    .stat-card { padding: 1.5rem .8rem; }
+    .stat-num { font-size: 2.2rem !important; }
+    .stat-label { font-size: .65rem !important; }
   }
   .stat-card::before {
     content: '';
@@ -1481,22 +1532,25 @@
       <ul class="d-none d-lg-flex align-items-center gap-4 list-unstyled mb-0">
         <li><a href="index.html" class="nav-link-custom active" aria-current="page">Home</a></li>
         <li><a href="about.html" class="nav-link-custom">About</a></li>
-        <li class="nav-dropdown dropdown">
-          <a class="nav-link-custom dropdown-toggle" href="courses.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="coursesDropdown">
+        <li class="nav-item dropdown nav-dropdown">
+          <a class="nav-link-custom dropdown-toggle" href="courses.html" id="navCourses" role="button">
             Courses <i class="bi bi-chevron-down" style="font-size:.65rem;"></i>
           </a>
-          <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-            <li><a class="dropdown-item" href="courses.html#vfx"><i class="bi bi-stars me-2" style="color:var(--gold);"></i>VFX (ADVFX Plus)</a></li>
-            <li><a class="dropdown-item" href="courses.html#3d"><i class="bi bi-cube me-2" style="color:var(--gold);"></i>3D Animation (AD3DIGHP)</a></li>
-            <li><a class="dropdown-item" href="courses.html#game"><i class="bi bi-controller me-2" style="color:var(--gold);"></i>Game Design (DGWA)</a></li>
-            <li><a class="dropdown-item" href="courses.html#graphics"><i class="bi bi-brush me-2" style="color:var(--gold);"></i>Graphic & Media (APDMD)</a></li>
-            <li><hr class="dropdown-divider" style="border-color:var(--border);margin:.3rem .5rem;"/></li>
-            <li><a class="dropdown-item" href="courses.html#short"><i class="bi bi-lightning me-2" style="color:var(--red);"></i>Short-Term Pro Courses</a></li>
+          <ul class="dropdown-menu fade-up" aria-labelledby="navCourses">
+            <li><a class="dropdown-item" href="course-graphic-design.html">Graphic Design</a></li>
+            <li><a class="dropdown-item" href="course-video-editing.html">Video Editing</a></li>
+            <li><a class="dropdown-item" href="course-game-design.html">Game Design</a></li>
+            <li><a class="dropdown-item" href="course-ar-vr.html">AR & VR</a></li>
+            <li><a class="dropdown-item" href="course-broadcast.html">Broadcast</a></li>
+            <li><a class="dropdown-item" href="course-3d-animation.html">3D Animation</a></li>
+            <li><a class="dropdown-item" href="course-vfx.html">Visual Effects (VFX)</a></li>
+            <li><a class="dropdown-item" href="course-digital-design.html">Digital Design</a></li>
+            <li><a class="dropdown-item" href="course-short-term.html">Short Term Courses</a></li>
           </ul>
         </li>
         <li><a href="placements.html" class="nav-link-custom">Placements</a></li>
-        <li><a href="about.html#gallery" class="nav-link-custom">Gallery</a></li>
-        <li><a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="nav-link-custom">Contact</a></li>
+        <li><a href="gallery.html" class="nav-link-custom">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link-custom">Contact</a></li>
         </ul>
       <!-- CTA + Mobile Toggle -->
       <div class="d-flex align-items-center gap-3">
@@ -1523,11 +1577,18 @@
   <div class="offcanvas-body p-0">
     <a href="index.html" class="mobile-nav-link">Home</a>
     <a href="about.html" class="mobile-nav-link">About Us</a>
-    <a href="courses.html" class="mobile-nav-link">All Courses</a>
-    <a href="courses.html#vfx" class="mobile-nav-link" style="padding-left:2.5rem;font-size:.85rem;color:var(--muted);">↳ VFX Courses</a>
-    <a href="courses.html#3d" class="mobile-nav-link" style="padding-left:2.5rem;font-size:.85rem;color:var(--muted);">↳ 3D Animation</a>
-    <a href="courses.html#game" class="mobile-nav-link" style="padding-left:2.5rem;font-size:.85rem;color:var(--muted);">↳ Game Design</a>
-    <a href="courses.html#short" class="mobile-nav-link" style="padding-left:2.5rem;font-size:.85rem;color:var(--muted);">↳ Short-Term Courses</a>
+    <a href="courses.html" class="mobile-nav-link">Courses</a>
+    <div class="mobile-nav-sub">
+      <a href="course-graphic-design.html" class="mobile-sub-link">Graphic Design</a>
+      <a href="course-video-editing.html" class="mobile-sub-link">Video Editing</a>
+      <a href="course-game-design.html" class="mobile-sub-link">Game Design</a>
+      <a href="course-3d-animation.html" class="mobile-sub-link">3D Animation</a>
+      <a href="course-vfx.html" class="mobile-sub-link">Visual Effects (VFX)</a>
+      <a href="course-digital-design.html" class="mobile-sub-link">Digital Design</a>
+      <a href="course-ar-vr.html" class="mobile-sub-link">AR & VR</a>
+      <a href="course-broadcast.html" class="mobile-sub-link">Broadcast</a>
+      <a href="course-short-term.html" class="mobile-sub-link">Short Term Courses</a>
+    </div>
     <a href="#placements" class="mobile-nav-link">Placements</a>
     <a href="about.html#gallery" class="mobile-nav-link">Gallery</a>
     <a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-bs-dismiss="offcanvas" class="mobile-nav-link">Contact</a>
@@ -1545,7 +1606,12 @@
      HERO CAROUSEL
 ═══════════════════════════════════════════════════════════════════ -->
 <section aria-label="Hero Slideshow" role="region">
-  <div id="heroCarousel" class="carousel carousel-fade slide" data-bs-ride="carousel" data-bs-interval="5500">
+  <div id="heroCarousel" class="carousel carousel-fade slide" data-bs-ride="carousel" data-bs-interval="5500" data-bs-pause="false">
+
+    <!-- Progress Bar -->
+    <div class="carousel-progress-wrap" aria-hidden="true">
+      <div class="carousel-progress-bar" id="heroProgressBar"></div>
+    </div>
 
     <!-- Indicators -->
     <div class="carousel-indicators">
@@ -1566,9 +1632,9 @@
           <div class="container-xl">
             <div class="row">
               <div class="col-lg-7 col-xl-6">
-                <span class="hero-eyebrow" data-bs-ride="carousel">
+                <!-- <span class="hero-eyebrow" data-bs-ride="carousel">
                   <i class="bi bi-stars"></i> NSDC & MESC Certified Institute
-                </span>
+                </span> -->
                 <h1 class="hero-title">
                   <em>Master</em> Visual <span class="line-red">Effects</span><br/>Like a Pro
                 </h1>
@@ -1592,7 +1658,7 @@
 
       <!-- Slide 2 – 3D Animation -->
       <div class="carousel-item">
-        <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=1920&q=90&fit=crop"
+        <img src="Images/hero_banner_03.jpg"
              alt="3D animation rendering pipeline at MAAC Ghaziabad studio"
              loading="lazy"/>
         <div class="hero-gradient"></div>
@@ -1604,7 +1670,7 @@
                   <i class="bi bi-cube"></i> Flagship Programme
                 </span> -->
                 <h1 class="hero-title">
-                  Bring Characters<br/>to <em>Life</em> with<br/><span class="line-red">3D Animation</span>
+                  Bring Character<br/>to <em>Life</em> with<br/><span class="line-red">3D Animation</span>
                 </h1>
                 <p class="hero-sub">
                   From concept sketches to blockbuster renders — master Maya, 3ds Max,
@@ -1626,7 +1692,7 @@
 
       <!-- Slide 3 – Game Design -->
       <div class="carousel-item">
-        <img src="Images/hero_banner_01.jpg"
+        <img src="Images/hero_banner_04.jpg"
              alt="Game design students creating immersive worlds at MAAC Ghaziabad"
              loading="lazy"/>
         <div class="hero-gradient"></div>
@@ -1634,9 +1700,9 @@
           <div class="container-xl">
             <div class="row">
               <div class="col-lg-7 col-xl-6">
-                <span class="hero-eyebrow">
+                <!-- <span class="hero-eyebrow">
                   <i class="bi bi-controller"></i> New Age Programme
-                </span>
+                </span> -->
                 <h1 class="hero-title">
                   Design <em>Worlds</em><br/>Build <span class="line-red">Games</span>
                 </h1>
@@ -2524,13 +2590,12 @@
       <div class="col-6 col-md-3 col-lg-2">
         <h3 class="footer-heading">Courses</h3>
         <ul class="footer-links" role="list">
-          <li><a href="courses.html#vfx">VFX — ADVFX Plus</a></li>
-          <li><a href="courses.html#3d">3D — AD3DIGHP</a></li>
-          <li><a href="courses.html#3d">D3D Animation</a></li>
-          <li><a href="courses.html#3d">DAFM Film Making</a></li>
-          <li><a href="courses.html#game">DGWA Game Design</a></li>
-          <li><a href="courses.html#graphics">APDMD Media</a></li>
-          <li><a href="courses.html#short">Short-Term Pro</a></li>
+          <li><a href="course-vfx.html">ADVFX Plus</a></li>
+          <li><a href="course-3d-animation.html">AD3D Edge Plus</a></li>
+          <li><a href="course-game-design.html">Game Design</a></li>
+          <li><a href="course-graphic-design.html">Graphic Design</a></li>
+          <li><a href="course-broadcast.html">Broadcast</a></li>
+          <li><a href="course-short-term.html">Short Term Pro</a></li>
         </ul>
       </div>
 
@@ -2735,24 +2800,43 @@
 
   document.querySelectorAll('.sr, .sr-left, .sr-right').forEach(el => observer.observe(el));
 
+  /* ── HERO PROGRESS BAR ── */
+  const heroBar = document.getElementById('heroProgressBar');
+  const heroCarouselEl = document.getElementById('heroCarousel');
+  if (heroBar && heroCarouselEl) {
+    let interval = 5500;
+    let start = Date.now();
+    function step() {
+      let elapsed = Date.now() - start;
+      let progress = Math.min(elapsed / interval, 1);
+      heroBar.style.width = (progress * 100) + '%';
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    heroCarouselEl.addEventListener('slide.bs.carousel', () => {
+      start = Date.now();
+      step();
+    });
+    step();
+  }
+
   /* ── STAT COUNTER ── */
-  function animateCounter(el, target, suffix) {
+  function animateCounter(el) {
+    const target = +el.dataset.target;
     let start = 0;
     const duration = 1800;
     const startTime = performance.now();
+    
     function update(now) {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 4); // ease out quart
+      const eased = 1 - Math.pow(1 - progress, 4);
       start = Math.round(eased * target);
-      // Update the text node (first text node in stat-num)
-      const numEl = el.querySelector('.stat-num');
-      if (numEl) {
-        const suffix_el = numEl.querySelector('.suffix');
-        if (suffix_el) {
-          numEl.childNodes[0].textContent = start.toLocaleString('en-IN');
-        }
+      
+      // Update text node before the span
+      if (el.childNodes.length > 0) {
+        el.childNodes[0].textContent = start.toLocaleString('en-IN');
       }
+      
       if (progress < 1) requestAnimationFrame(update);
     }
     requestAnimationFrame(update);
@@ -2764,11 +2848,11 @@
     const statsObserver = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting && !statsDone) {
         statsDone = true;
-        document.querySelectorAll('[data-target]').forEach(card => {
-          animateCounter(card.closest('.stat-card'), +card.dataset.target, card.dataset.suffix || '');
+        document.querySelectorAll('#stats [data-target]').forEach(el => {
+          animateCounter(el);
         });
       }
-    }, { threshold: 1 });
+    }, { threshold: 0.15 });
     statsObserver.observe(statsSection);
   }
 
