@@ -1026,6 +1026,187 @@
     background: repeating-linear-gradient(90deg, rgba(212,175,55,.25) 0, rgba(212,175,55,.25) 6px, transparent 6px, transparent 12px);
   }
 
+  /* ═══════════════════════════════════════════════════════════════════
+     DUAL PATHWAYS
+  ═══════════════════════════════════════════════════════════════════ */
+  .dual-pathways-section {
+    position: relative;
+    padding: 6.5rem 0;
+    background:
+      radial-gradient(circle at 0% 0%, rgba(86, 8, 18, .55), transparent 28%),
+      linear-gradient(90deg, #180607 0%, #241008 42%, #3c2b09 100%);
+    overflow: hidden;
+  }
+  .dual-pathways-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(0,0,0,.14), transparent 45%, rgba(212,175,55,.05));
+    pointer-events: none;
+  }
+  .dual-launch-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .65rem 1.2rem;
+    background: linear-gradient(135deg, #ff2c1f, #d91510);
+    color: #fff;
+    font-size: .9rem;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: .02em;
+    clip-path: polygon(10px 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+    box-shadow: 0 14px 30px rgba(210,35,42,.25);
+  }
+  .dual-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2.3rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.05;
+    color: #ffbf13;
+    margin-bottom: 1.8rem;
+  }
+  .dual-lead {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: rgba(255,255,255,.9);
+    margin-bottom: 1.35rem;
+    max-width: 860px;
+  }
+  .dual-logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .dual-logo-row img {
+    display: block;
+    height: 64px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  .dual-visual-wrap {
+    position: relative;
+    max-width: 390px;
+    margin-left: auto;
+  }
+  .dual-visual-wrap::before,
+  .dual-visual-wrap::after {
+    content: '';
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    border-color: var(--red);
+    z-index: 0;
+  }
+  .dual-visual-wrap::before {
+    top: -16px;
+    left: -16px;
+    border-top: 3px solid;
+    border-left: 3px solid;
+  }
+  .dual-visual-wrap::after {
+    right: -16px;
+    bottom: -16px;
+    border-right: 3px solid #ffbf13;
+    border-bottom: 3px solid #ffbf13;
+  }
+  .dual-visual {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 24px 60px rgba(0,0,0,.3);
+    display: block;
+  }
+  .dual-card {
+    height: 100%;
+    background: rgba(8,8,8,.62);
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 14px 30px rgba(0,0,0,.14);
+  }
+  .dual-card-logo {
+    height: 56px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1.2rem;
+  }
+  .dual-card-intro {
+    color: rgba(255,255,255,.82);
+    font-size: .95rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+  .dual-points {
+    margin: 0;
+    padding-left: 1.3rem;
+  }
+  .dual-points li {
+    color: #ff564e;
+    font-size: .95rem;
+    line-height: 1.75;
+    margin-bottom: .45rem;
+  }
+  .dual-affiliated-title {
+    text-align: center;
+    color: #ffbf13;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin: 4.2rem 0 2rem;
+  }
+  .dual-affiliate-card {
+    position: relative;
+    height: 100%;
+    background: rgba(8,8,8,.84);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 0;
+    padding: 1.45rem 1.55rem;
+    box-shadow: 0 14px 30px rgba(0,0,0,.12);
+  }
+  .dual-affiliate-course {
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin-bottom: .35rem;
+  }
+  .dual-affiliate-meta {
+    color: rgba(255,255,255,.72);
+    font-size: .88rem;
+    font-style: italic;
+  }
+  .dual-affiliate-line {
+    width: 100%;
+    height: 5px;
+    background: rgba(255,255,255,.9);
+    margin-top: 1.4rem;
+  }
+  .dual-affiliate-arrow {
+    position: absolute;
+    top: 1.45rem;
+    right: 1.3rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: transform var(--trans), background var(--trans), color var(--trans);
+  }
+  .dual-affiliate-arrow:hover {
+    background: var(--gold);
+    color: var(--ink);
+    transform: translateY(-2px);
+  }
+
   /* ═══════════════════════════════════════════════════════════
      PARTNERS / PLACEMENTS MARQUEE
   ════════════════════════════════════════════════════════════ */
@@ -1458,6 +1639,8 @@
     .about-img-main { width: 85%; height: 85%; }
     .about-img-secondary { width: 50%; height: 50%; }
     .video-glass-card { padding: 2.5rem 2rem; margin: 0 1rem; }
+    .dual-visual-wrap { margin: 2rem auto 0; }
+    .dual-card { padding: 1.6rem; }
   }
   @media (max-width: 767px) {
     html, body {
@@ -1493,6 +1676,11 @@
     .process-connector { display: none; }
     .video-cta { height: auto; padding: 4rem 1rem; }
     .footer-bottom { flex-direction: column; text-align: center; }
+    .dual-pathways-section { padding: 4.8rem 0; }
+    .dual-logo-row img { height: 46px; }
+    .dual-lead { font-size: .94rem; }
+    .dual-card,
+    .dual-affiliate-card { padding: 1.3rem; }
   }
   @media (max-width: 575px) {
     .hero-slide-content { padding-top: 100px; }
@@ -1500,6 +1688,12 @@
       width: 100%;
       justify-content: center;
     }
+    .dual-logo-row { gap: 1rem; }
+    .dual-logo-row img { height: 38px; }
+    .dual-visual-wrap::before,
+    .dual-visual-wrap::after { width: 42px; height: 42px; }
+    .dual-affiliate-course { font-size: .96rem; padding-right: 3rem; }
+    .dual-affiliate-arrow { width: 38px; height: 38px; top: 1.15rem; right: 1rem; }
     .floating-cta {
       left: 1rem;
       bottom: 1rem;
@@ -1835,6 +2029,121 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     DUAL PATHWAYS
+═══════════════════════════════════════════════════════════════════ -->
+<section class="dual-pathways-section" aria-labelledby="dualPathwaysHeading">
+  <div class="container-xl position-relative">
+    <div class="d-flex justify-content-between align-items-start gap-3 flex-wrap mb-4 sr">
+      <h2 class="dual-heading mb-0" id="dualPathwaysHeading">Dual Pathways: Industry Co-curated programs</h2>
+      <div class="dual-launch-badge">Newly Launched <span>&#9658;&#9658;</span></div>
+    </div>
+
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-8 sr sr-delay-1">
+        <div class="dual-logo-row">
+          <img src="Images/career.png" alt="CareerX logo" loading="lazy"/>
+          <img src="Images/creator.png" alt="CreatorX logo" loading="lazy"/>
+        </div>
+        <p class="dual-lead">
+          CareerX and CreatorX are industry-led learning pathways introduced to equip students with future-ready
+          skills in creative and digital media fields like animation, VFX, gaming, and digital content.
+        </p>
+        <p class="dual-lead">
+          MAAC's future-ready learning ecosystem prepares you to excel in studios and thrive as an independent
+          creator in the digital economy.
+        </p>
+        <p class="dual-lead mb-0">
+          Become a studio-ready artist and an independent creative force.
+        </p>
+      </div>
+
+      <div class="col-lg-4 sr sr-delay-2">
+        <div class="dual-visual-wrap">
+          <img src="Images/creative-age.jpg" alt="Creative age new launch visual" class="dual-visual" loading="lazy"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-4">
+      <div class="col-lg-6 sr sr-delay-1">
+        <div class="dual-card">
+          <img src="Images/career.png" alt="CareerX program" class="dual-card-logo" loading="lazy"/>
+          <p class="dual-card-intro">A 1st of its kind, industry-led, Studio-aligned Learning program:</p>
+          <ul class="dual-points">
+            <li>Industry-academia learning</li>
+            <li>Studio-led delivery</li>
+            <li>Live case studies</li>
+            <li>End-to-end production workflow</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6 sr sr-delay-2">
+        <div class="dual-card">
+          <img src="Images/creator.png" alt="CreatorX program" class="dual-card-logo" loading="lazy"/>
+          <p class="dual-card-intro">Create. Collaborate. Grow.</p>
+          <ul class="dual-points">
+            <li>Entrepreneurship readiness</li>
+            <li>Prep for gig economy & freelance work</li>
+            <li>Project & client management</li>
+            <li>IP creation & monetisation</li>
+            <li>Training directly from industry experts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="dual-affiliated-title sr">Our Affiliated Courses</h3>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-xl-3 sr sr-delay-1">
+        <div class="dual-affiliate-card">
+          <div class="dual-affiliate-course">AD3D Edge Plus -</div>
+          <div class="dual-affiliate-meta">Powered by CareerX | CreatorX</div>
+          <a href="course-3d-animation.html" class="dual-affiliate-arrow" aria-label="Open AD3D Edge Plus">
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <div class="dual-affiliate-line"></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-xl-3 sr sr-delay-2">
+        <div class="dual-affiliate-card">
+          <div class="dual-affiliate-course">ADVFX Plus -</div>
+          <div class="dual-affiliate-meta">Powered by CareerX | CreatorX</div>
+          <a href="course-vfx.html" class="dual-affiliate-arrow" aria-label="Open ADVFX Plus">
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <div class="dual-affiliate-line"></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-xl-3 sr sr-delay-3">
+        <div class="dual-affiliate-card">
+          <div class="dual-affiliate-course">APDMC Plus -</div>
+          <div class="dual-affiliate-meta">Powered by CareerX | CreatorX</div>
+          <a href="course-graphic-design.html" class="dual-affiliate-arrow" aria-label="Open APDMC Plus">
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <div class="dual-affiliate-line"></div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-xl-3 sr sr-delay-4">
+        <div class="dual-affiliate-card">
+          <div class="dual-affiliate-course">ADIDG Plus -</div>
+          <div class="dual-affiliate-meta">Powered by CareerX | CreatorX</div>
+          <a href="course-game-design.html" class="dual-affiliate-arrow" aria-label="Open ADIDG Plus">
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+          <div class="dual-affiliate-line"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
