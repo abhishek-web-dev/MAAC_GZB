@@ -122,11 +122,27 @@ const MAAC_FOOTER = `
             Maya Academy of Advanced Creativity - India's premier institute
             for Animation, VFX, Gaming & Design. Ghaziabad RDC centre.
           </p>
-          <div class="footer-socials" aria-label="Social media links">
-            <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <div class="footer-socials" style="margin-top:20px" aria-label="Social media links">
+            <a href="https://www.facebook.com/profile.php?id=61588161250891" target="_blank" rel="noopener noreferrer" class="fsoc fsoc-fb" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12S0 5.446 0 12.073c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/maacrdc/" target="_blank" rel="noopener noreferrer" class="fsoc fsoc-insta" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+              </svg>
+            </a>
+            <a href="mailto:maacrdcghaziabad@gmail.com" class="fsoc fsoc-mail" aria-label="Email">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@MAACRDC" target="_blank" rel="noopener noreferrer" class="fsoc fsoc-yt" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.5 6.2a2.99 2.99 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A2.99 2.99 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a2.99 2.99 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a2.99 2.99 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -188,11 +204,28 @@ const MAAC_FOOTER = `
       </div>
     </div>
 
+    <div class="footer-disclaimer">
+      <div class="footer-disclaimer-label">Disclaimer</div>
+      <p>
+        This website (<a href="https://maacghaziabad.in/" target="_blank" rel="noopener">https://maacghaziabad.in/</a>) is not the official website of MAAC India. It is owned and operated by an authorized franchisee/business partner of MAAC (Maya Academy of Advanced Creativity), a registered trademark of MEL Training and Assessments Limited, a subsidiary of Aptech Ltd.
+      </p>
+      <p>
+        All course content, curriculum, and related materials are the exclusive property of MEL Training and Assessments Limited. While every effort is made to ensure that the information provided on this website is accurate and up to date, inadvertent errors or outdated information may occasionally occur.
+      </p>
+      <p>
+        The information presented is provided without any guarantee of completeness or absolute accuracy. Placement assistance may be offered as per the applicable program guidelines; however, employment or job placement is not guaranteed.
+      </p>
+    </div>
+
     <div class="footer-bottom">
       <div class="footer-bottom-text">
         &copy; <span id="footerYear"></span> MAAC Ghaziabad RDC. All rights reserved. |
         NSDC &amp; MESC Affiliated.
       </div>
+      <p class="footer-credit">
+        Developed and Managed by
+        <a href="https://lso360seoplugin.com/" target="_blank" rel="noopener">Advertising India</a>
+      </p>
       <nav class="footer-bottom-links" aria-label="Footer legal links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Use</a>
@@ -201,6 +234,136 @@ const MAAC_FOOTER = `
     </div>
   </div>
 </footer>
+`;
+
+const MAAC_LOCATION_SECTION = `
+<section class="maac-location-section" aria-labelledby="maacLocationHeading">
+  <div class="container-xl">
+    <div class="text-center mb-4">
+      <span class="sec-eyebrow">Find Us</span>
+      <h2 class="sec-title sec-title-sm" id="maacLocationHeading">
+        Visit <span style="color:var(--red);font-style:italic;">MAAC Ghaziabad RDC</span>
+      </h2>
+      <div class="divider-gold centered"></div>
+    </div>
+
+    <div class="maac-location-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.023773793792!2d77.43697957550003!3d28.658567282481734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1b4fd4bf3b3%3A0xe9f4d1ebdcef7a7f!2sMAAC%20Ghaziabad%20RDC!5e0!3m2!1sen!2sin!4v1744033458290!5m2!1sen!2sin"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="MAAC Ghaziabad RDC location map"
+        aria-label="Interactive map showing MAAC Ghaziabad RDC location">
+      </iframe>
+
+      <div class="maac-location-card">
+        <div class="maac-location-title">MAAC Ghaziabad RDC</div>
+        <div class="maac-location-text">
+          Advocate Chamber 4, 1st Floor,<br/>
+          Near Domino's Pizza, RDC Rajnagar,<br/>
+          Ghaziabad, Uttar Pradesh - 201002
+        </div>
+        <div class="maac-location-meta">
+          <span><i class="bi bi-telephone-fill"></i> +91 784 000 2724 / 2725</span>
+          <span><i class="bi bi-clock-fill"></i> Mon-Sat: 9:00 AM - 7:00 PM</span>
+        </div>
+        <a href="https://maps.app.goo.gl/HyWppxWkPRFxATjP6" target="_blank" rel="noopener" class="maac-directions-btn">
+          <i class="bi bi-sign-turn-right-fill"></i> Get Directions
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+const MAAC_ENQUIRY_MODAL = `
+<div class="modal fade enquiry-modal" id="enquiryModal" tabindex="-1" role="dialog" aria-labelledby="enquiryModalLabel" aria-modal="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <img src="Images/logo_white.png" alt="MAAC Ghaziabad RDC" height="36" onerror="this.style.display='none'"/>
+          <div style="color:rgba(255,255,255,.5);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-top:.4rem;">Request a Free Counselling</div>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-4">
+          <div class="col-lg-5 d-none d-lg-flex flex-column justify-content-center maac-enquiry-aside">
+            <span class="sec-eyebrow" style="margin-bottom:.8rem;">Why Enquire?</span>
+            <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;margin-bottom:1rem;">Get personalised guidance - <span style="color:var(--red);font-style:italic;">free.</span></h3>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.7rem;">
+              <li style="font-size:.84rem;color:var(--muted);display:flex;align-items:center;gap:.6rem;"><i class="bi bi-check-circle-fill" style="color:var(--gold);"></i> Free demo class booking</li>
+              <li style="font-size:.84rem;color:var(--muted);display:flex;align-items:center;gap:.6rem;"><i class="bi bi-check-circle-fill" style="color:var(--gold);"></i> Course selection guidance</li>
+              <li style="font-size:.84rem;color:var(--muted);display:flex;align-items:center;gap:.6rem;"><i class="bi bi-check-circle-fill" style="color:var(--gold);"></i> Fee structure & EMI info</li>
+              <li style="font-size:.84rem;color:var(--muted);display:flex;align-items:center;gap:.6rem;"><i class="bi bi-check-circle-fill" style="color:var(--gold);"></i> Scholarship information</li>
+              <li style="font-size:.84rem;color:var(--muted);display:flex;align-items:center;gap:.6rem;"><i class="bi bi-check-circle-fill" style="color:var(--gold);"></i> Callback within 24 hours</li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <form id="enquiryForm" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label-custom" for="enqFirstName">First Name *</label>
+                  <input type="text" id="enqFirstName" class="form-control-custom" placeholder="First Name" required autocomplete="given-name"/>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label-custom" for="enqLastName">Last Name *</label>
+                  <input type="text" id="enqLastName" class="form-control-custom" placeholder="Last Name" required autocomplete="family-name"/>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label-custom" for="enqPhone">Phone Number *</label>
+                  <input type="tel" id="enqPhone" class="form-control-custom" placeholder="Phone Number" required autocomplete="tel"/>
+                </div>
+                <div class="col-sm-6">
+                  <label class="form-label-custom" for="enqEmail">Email Address</label>
+                  <input type="email" id="enqEmail" class="form-control-custom" placeholder="Email Address" autocomplete="email"/>
+                </div>
+                <div class="col-12">
+                  <label class="form-label-custom" for="enqQualification">Qualification *</label>
+                  <input type="text" id="enqQualification" class="form-control-custom" placeholder="Qualification" required/>
+                </div>
+                <div class="col-12">
+                  <label class="form-label-custom" for="enqCourse">Course of Interest *</label>
+                  <select id="enqCourse" class="form-control-custom" required style="cursor:pointer;">
+                    <option value="">Select a programme...</option>
+                    <option>VFX - ADVFX Plus</option>
+                    <option>3D Animation - AD3DIGHP</option>
+                    <option>3D Animation - D3D</option>
+                    <option>Film Making - DAFM</option>
+                    <option>Game Design</option>
+                    <option>Graphic Design</option>
+                    <option>Video Editing</option>
+                    <option>AR & VR Design</option>
+                    <option>Broadcast</option>
+                    <option>Digital Design</option>
+                    <option>Short Term Courses</option>
+                    <option>Not Sure - Need Guidance</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label-custom" for="enqMessage">Message (Optional)</label>
+                  <textarea id="enqMessage" class="form-control-custom" rows="3" placeholder="Message" style="resize:none;"></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn-brand-red w-100 justify-content-center maac-enquiry-submit">
+                    <i class="bi bi-send-fill"></i> Submit Enquiry - Get Free Callback
+                  </button>
+                  <div style="font-size:.72rem;color:var(--muted-2);text-align:center;margin-top:.7rem;">We respect your privacy. No spam. Callback within 24 hours.</div>
+                </div>
+              </div>
+            </form>
+            <div id="enquirySuccess" class="text-center" style="display:none;padding:3rem 1rem;">
+              <i class="bi bi-check-circle-fill" style="font-size:3.5rem;color:var(--gold);display:block;margin-bottom:1rem;"></i>
+              <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;margin-bottom:.5rem;">Enquiry Received!</h3>
+              <p style="color:var(--muted);font-size:.9rem;">Our counsellor will call you within 24 hours.<br/>Check your email for a confirmation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 const MAAC_SHARED_SHELL_CSS = `
@@ -303,6 +466,351 @@ const MAAC_SHARED_SHELL_CSS = `
   object-fit: contain !important;
 }
 
+#mainFooter .footer-socials {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: .75rem !important;
+  align-items: center !important;
+}
+
+#mainFooter .fsoc {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  background: rgba(255,255,255,.08) !important;
+  border: 1px solid rgba(255,255,255,.1) !important;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,.2) !important;
+}
+
+#mainFooter .fsoc svg {
+  width: 18px !important;
+  height: 18px !important;
+  fill: #fff !important;
+}
+
+#mainFooter .fsoc:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 24px rgba(0,0,0,.26) !important;
+}
+
+#mainFooter .fsoc-fb {
+  background: rgba(255,255,255,.08) !important;
+}
+
+#mainFooter .fsoc-insta {
+  background: rgba(255,255,255,.08) !important;
+}
+
+#mainFooter .fsoc-mail {
+  background: rgba(255,255,255,.08) !important;
+}
+
+#mainFooter .fsoc-yt {
+  background: rgba(255,255,255,.08) !important;
+}
+
+#mainFooter .fsoc-fb:hover {
+  background: #1877f2 !important;
+  border-color: #1877f2 !important;
+}
+
+#mainFooter .fsoc-insta:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%) !important;
+  border-color: rgba(255,255,255,.18) !important;
+}
+
+#mainFooter .fsoc-mail:hover {
+  background: #ea4335 !important;
+  border-color: #ea4335 !important;
+}
+
+#mainFooter .fsoc-yt:hover {
+  background: #ff0000 !important;
+  border-color: #ff0000 !important;
+}
+
+#mainFooter .footer-disclaimer {
+  margin-top: 2.2rem !important;
+  padding: 1.25rem 1.35rem !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: 16px !important;
+  background: rgba(255,255,255,.03) !important;
+}
+
+#mainFooter .footer-disclaimer p {
+  margin: 0 0 .75rem !important;
+  color: rgba(255,255,255,.68) !important;
+  font-size: .78rem !important;
+  line-height: 1.75 !important;
+}
+
+#mainFooter .footer-disclaimer p:last-child {
+  margin-bottom: 0 !important;
+}
+
+#mainFooter .footer-disclaimer-label {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .5rem !important;
+  margin-bottom: .85rem !important;
+  color: var(--gold) !important;
+  font-size: .7rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+}
+
+#mainFooter .footer-disclaimer-label::before {
+  content: "" !important;
+  width: 22px !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, var(--gold), var(--red)) !important;
+}
+
+#mainFooter .footer-disclaimer a {
+  color: var(--gold) !important;
+  text-decoration: none !important;
+}
+
+#mainFooter .footer-disclaimer a:hover {
+  color: #fff !important;
+}
+
+#mainFooter .footer-credit {
+  margin: 0 !important;
+  color: rgba(255,255,255,.76) !important;
+  font-size: .8rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+
+#mainFooter .footer-credit a {
+  color: var(--gold) !important;
+  text-decoration: none !important;
+}
+
+#mainFooter .footer-credit a:hover {
+  color: #fff !important;
+}
+
+#mainFooter .footer-bottom {
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+
+#mainFooter .footer-bottom-text {
+  justify-self: start !important;
+}
+
+#mainFooter .footer-bottom-links {
+  justify-self: end !important;
+}
+
+.maac-location-section {
+  background: #fff !important;
+  padding: 5rem 0 0 !important;
+}
+
+.maac-location-wrap {
+  position: relative !important;
+  overflow: hidden !important;
+  height: 460px !important;
+  border-radius: 20px 20px 0 0 !important;
+  border: 1px solid rgba(15,15,15,.08) !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,.08) !important;
+}
+
+.maac-location-wrap iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+  display: block !important;
+}
+
+.maac-location-card {
+  position: absolute !important;
+  top: 1.5rem !important;
+  left: 1.5rem !important;
+  max-width: 300px !important;
+  padding: 1.15rem 1.2rem !important;
+  border-radius: 16px !important;
+  background: rgba(255,255,255,.92) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 14px 40px rgba(0,0,0,.12) !important;
+}
+
+.maac-location-title {
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-size: 1.2rem !important;
+  letter-spacing: .08em !important;
+  color: #101010 !important;
+  margin-bottom: .55rem !important;
+}
+
+.maac-location-text {
+  color: #6b7280 !important;
+  font-size: .84rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: .8rem !important;
+}
+
+.maac-location-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: .45rem !important;
+  margin-bottom: 1rem !important;
+  color: #4b5563 !important;
+  font-size: .78rem !important;
+}
+
+.maac-location-meta i {
+  color: var(--gold) !important;
+  margin-right: .35rem !important;
+}
+
+.maac-directions-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: .45rem !important;
+  padding: .75rem 1rem !important;
+  border-radius: 999px !important;
+  background: var(--red) !important;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-size: .78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+  transition: transform .2s ease, background .2s ease !important;
+}
+
+.maac-directions-btn:hover {
+  background: var(--red-dark) !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+}
+
+.enquiry-modal .modal-dialog {
+  max-width: 860px !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.enquiry-modal .modal-content {
+  border: 0 !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+}
+
+.enquiry-modal {
+  z-index: 20000 !important;
+}
+
+.enquiry-modal.show {
+  display: block !important;
+}
+
+.modal-backdrop.show {
+  z-index: 19990 !important;
+}
+
+.enquiry-modal .modal-header {
+  background: #101010 !important;
+  border-bottom: 0 !important;
+  padding: 1rem 1.25rem !important;
+}
+
+.enquiry-modal .modal-body {
+  padding: 1.1rem !important;
+  background: #fff !important;
+}
+
+.maac-enquiry-aside {
+  background: var(--off-white, #f7f4ee) !important;
+  border-radius: 14px !important;
+  padding: 1.35rem !important;
+}
+
+.form-label-custom {
+  display: block !important;
+  margin-bottom: .4rem !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: .68rem !important;
+  font-weight: 700 !important;
+  letter-spacing: .1em !important;
+  text-transform: uppercase !important;
+  color: #6b7280 !important;
+}
+
+.form-control-custom {
+  width: 100% !important;
+  min-height: 50px !important;
+  padding: .78rem .95rem !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(15,15,15,.1) !important;
+  background: #fff !important;
+  color: #101010 !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: .9rem !important;
+  box-shadow: none !important;
+  transition: border-color .2s ease, box-shadow .2s ease !important;
+}
+
+textarea.form-control-custom {
+  min-height: 92px !important;
+}
+
+.form-control-custom:focus {
+  border-color: rgba(212,175,55,.9) !important;
+  box-shadow: 0 0 0 3px rgba(212,175,55,.12) !important;
+  outline: none !important;
+}
+
+.maac-enquiry-submit {
+  padding: .9rem !important;
+}
+
+.enquiry-modal .sec-eyebrow {
+  font-size: .68rem !important;
+  letter-spacing: .18em !important;
+}
+
+.enquiry-modal .btn-close {
+  transform: scale(.9);
+}
+
+.enquiry-modal .modal-header img {
+  height: 30px !important;
+  width: auto !important;
+}
+
+.enquiry-modal .modal-header div div {
+  font-size: .66rem !important;
+}
+
+.maac-enquiry-aside h3 {
+  font-size: 1.18rem !important;
+  line-height: 1.35 !important;
+}
+
+.maac-enquiry-aside li {
+  font-size: .8rem !important;
+}
+
+.enquiry-modal .row.g-4 {
+  --bs-gutter-y: 1rem !important;
+  --bs-gutter-x: 1rem !important;
+}
+
 @media (max-width: 991px) {
   #topBar {
     display: none !important;
@@ -322,6 +830,29 @@ const MAAC_SHARED_SHELL_CSS = `
     padding: .78rem 1.2rem !important;
     font-size: .75rem !important;
   }
+
+  .enquiry-modal .modal-body {
+    padding: 1rem !important;
+  }
+
+  .enquiry-modal .modal-dialog {
+    max-width: min(760px, calc(100vw - 1.5rem)) !important;
+    margin-top: 1rem !important;
+  }
+
+  .maac-location-wrap {
+    height: 360px !important;
+  }
+
+  #mainFooter .footer-bottom {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+
+  #mainFooter .footer-bottom-text,
+  #mainFooter .footer-bottom-links {
+    justify-self: center !important;
+  }
 }
 
 @media (max-width: 575px) {
@@ -332,6 +863,57 @@ const MAAC_SHARED_SHELL_CSS = `
   #mainNav .nav-logo-img,
   #mainNav.scrolled .nav-logo-img {
     height: 38px !important;
+  }
+
+  .enquiry-modal .modal-header {
+    padding: .85rem .9rem !important;
+  }
+
+  .form-control-custom {
+    min-height: 48px !important;
+    font-size: .88rem !important;
+  }
+
+  textarea.form-control-custom {
+    min-height: 84px !important;
+  }
+
+  .enquiry-modal .modal-dialog {
+    max-width: calc(100vw - 1rem) !important;
+    margin: .75rem auto !important;
+  }
+
+  .enquiry-modal .modal-content {
+    border-radius: 14px !important;
+  }
+
+  .enquiry-modal .modal-body {
+    padding: .85rem !important;
+  }
+
+  .maac-location-section {
+    padding-top: 4.2rem !important;
+  }
+
+  .maac-location-wrap {
+    height: 320px !important;
+    border-radius: 18px 18px 0 0 !important;
+  }
+
+  .maac-location-card {
+    top: 1rem !important;
+    left: 1rem !important;
+    right: 1rem !important;
+    max-width: none !important;
+    padding: .95rem 1rem !important;
+  }
+
+  #mainFooter .footer-disclaimer {
+    padding: 1rem !important;
+  }
+
+  #mainFooter .footer-credit {
+    white-space: normal !important;
   }
 }
 `;
@@ -347,6 +929,7 @@ const MAAC_SHARED_SHELL_CSS = `
   const topbarPlaceholder = document.getElementById("topbar-placeholder");
   const navbarPlaceholder = document.getElementById("navbar-placeholder");
   const footerPlaceholder = document.getElementById("footer-placeholder");
+  const page = window.location.pathname.split("/").pop() || "index.html";
 
   if (topbarPlaceholder) {
     topbarPlaceholder.innerHTML = MAAC_TOPBAR;
@@ -365,13 +948,22 @@ const MAAC_SHARED_SHELL_CSS = `
   }
 
   if (footerPlaceholder) {
+    if (page !== "contact.html" && !document.getElementById("maacSharedLocation")) {
+      footerPlaceholder.insertAdjacentHTML("beforebegin", `<div id="maacSharedLocation">${MAAC_LOCATION_SECTION}</div>`);
+    }
     footerPlaceholder.innerHTML = MAAC_FOOTER;
   } else {
     const oldFooter = document.getElementById("mainFooter");
     if (oldFooter) oldFooter.outerHTML = MAAC_FOOTER;
   }
 
-  const page = window.location.pathname.split("/").pop() || "index.html";
+  const existingEnquiryModal = document.getElementById("enquiryModal");
+  if (existingEnquiryModal) {
+    existingEnquiryModal.outerHTML = MAAC_ENQUIRY_MODAL;
+  } else {
+    document.body.insertAdjacentHTML("beforeend", MAAC_ENQUIRY_MODAL);
+  }
+
   const pageMap = {
     "index.html": "home",
     "about.html": "about",
@@ -414,5 +1006,63 @@ const MAAC_SHARED_SHELL_CSS = `
   const footerYear = document.getElementById("footerYear");
   if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
+  }
+
+  const enquiryForm = document.getElementById("enquiryForm");
+  const enquirySuccess = document.getElementById("enquirySuccess");
+  if (enquiryForm && !enquiryForm.dataset.bound) {
+    enquiryForm.dataset.bound = "true";
+    enquiryForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      let isValid = true;
+      enquiryForm.querySelectorAll("[required]").forEach((field) => {
+        if (!field.value.trim()) {
+          field.style.borderColor = "var(--red)";
+          isValid = false;
+          setTimeout(() => {
+            field.style.borderColor = "";
+          }, 2000);
+        }
+      });
+
+      if (!isValid) return;
+
+      enquiryForm.style.display = "none";
+      if (enquirySuccess) {
+        enquirySuccess.style.display = "block";
+      }
+    });
+  }
+
+  const setupRepeatingEnquiryModal = () => {
+    const modalEl = document.getElementById("enquiryModal");
+    if (!modalEl || typeof window.bootstrap === "undefined") return;
+
+    const enquiryModal = new window.bootstrap.Modal(modalEl);
+    let reopenTimer = null;
+
+    const queueOpen = () => {
+      window.clearTimeout(reopenTimer);
+      reopenTimer = window.setTimeout(() => {
+        const isAlreadyOpen = modalEl.classList.contains("show");
+        if (!isAlreadyOpen) {
+          enquiryModal.show();
+        }
+      }, 6000);
+    };
+
+    queueOpen();
+    modalEl.addEventListener("hidden.bs.modal", queueOpen);
+  };
+
+  if (document.getElementById("enquiryModal")) {
+    if (typeof window.bootstrap !== "undefined") {
+      setupRepeatingEnquiryModal();
+    } else {
+      window.addEventListener("load", () => {
+        setupRepeatingEnquiryModal();
+      }, { once: true });
+    }
   }
 })();

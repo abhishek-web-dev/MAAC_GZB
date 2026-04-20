@@ -554,11 +554,10 @@ const MAAC_FOOTER = `
             Maya Academy of Advanced Creativity - India's premier institute
             for Animation, VFX, Gaming & Design. Ghaziabad RDC centre.
           </p>
-          <div class="footer-socials" aria-label="Social media links">
-            <a href="#" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+           <div class="footer-socials" aria-label="Social media links">
+            <a href="https://www.facebook.com/profile.php?id=61588161250891" class="social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+           <a href="#" class="social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+             <a href="#" class="social-btn" aria-label="YouTube"><i class="bi bi-youtube"></i></a>            
           </div>
         </div>
       </div>
