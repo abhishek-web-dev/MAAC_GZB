@@ -283,7 +283,7 @@ const MAAC_ENQUIRY_MODAL = `
       <div class="modal-header">
         <div>
           <img src="Images/logo_white.png" alt="MAAC Ghaziabad RDC" height="36" onerror="this.style.display='none'"/>
-          <div style="color:rgba(255,255,255,.5);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-top:.4rem;">Request a Free Counselling</div>
+          <div class="maac-enquiry-title">Request a Free Counselling</div>
         </div>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
@@ -318,10 +318,6 @@ const MAAC_ENQUIRY_MODAL = `
                 <div class="col-sm-6">
                   <label class="form-label-custom" for="enqEmail">Email Address</label>
                   <input type="email" id="enqEmail" class="form-control-custom" placeholder="Email Address" autocomplete="email"/>
-                </div>
-                <div class="col-12">
-                  <label class="form-label-custom" for="enqQualification">Qualification *</label>
-                  <input type="text" id="enqQualification" class="form-control-custom" placeholder="Qualification" required/>
                 </div>
                 <div class="col-12">
                   <label class="form-label-custom" for="enqCourse">Course of Interest *</label>
@@ -729,6 +725,11 @@ const MAAC_SHARED_SHELL_CSS = `
   padding: 1rem 1.25rem !important;
 }
 
+.enquiry-modal .modal-header > div {
+  width: 100% !important;
+  text-align: center !important;
+}
+
 .enquiry-modal .modal-body {
   padding: 1.1rem !important;
   background: #fff !important;
@@ -791,10 +792,18 @@ textarea.form-control-custom {
 .enquiry-modal .modal-header img {
   height: 30px !important;
   width: auto !important;
+  margin: 0 auto !important;
+  display: block !important;
 }
 
-.enquiry-modal .modal-header div div {
-  font-size: .66rem !important;
+.maac-enquiry-title {
+  margin-top: .45rem !important;
+  color: var(--gold) !important;
+  font-size: .9rem !important;
+  font-weight: 800 !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
 }
 
 .maac-enquiry-aside h3 {
@@ -1035,33 +1044,34 @@ textarea.form-control-custom {
     });
   }
 
-  const setupRepeatingEnquiryModal = () => {
+  const setupAutoEnquiryModal = () => {
     const modalEl = document.getElementById("enquiryModal");
     if (!modalEl || typeof window.bootstrap === "undefined") return;
 
     const enquiryModal = new window.bootstrap.Modal(modalEl);
-    let reopenTimer = null;
+    const rootEl = document.documentElement;
+    modalEl.addEventListener("show.bs.modal", () => {
+      document.body.style.overflow = "hidden";
+      rootEl.style.overflow = "hidden";
+    });
+    modalEl.addEventListener("hidden.bs.modal", () => {
+      document.body.style.overflow = "";
+      rootEl.style.overflow = "";
+    });
 
-    const queueOpen = () => {
-      window.clearTimeout(reopenTimer);
-      reopenTimer = window.setTimeout(() => {
-        const isAlreadyOpen = modalEl.classList.contains("show");
-        if (!isAlreadyOpen) {
-          enquiryModal.show();
-        }
-      }, 6000);
-    };
-
-    queueOpen();
-    modalEl.addEventListener("hidden.bs.modal", queueOpen);
+    window.setTimeout(() => {
+      if (!modalEl.classList.contains("show")) {
+        enquiryModal.show();
+      }
+    }, 10000);
   };
 
   if (document.getElementById("enquiryModal")) {
     if (typeof window.bootstrap !== "undefined") {
-      setupRepeatingEnquiryModal();
+      setupAutoEnquiryModal();
     } else {
       window.addEventListener("load", () => {
-        setupRepeatingEnquiryModal();
+        setupAutoEnquiryModal();
       }, { once: true });
     }
   }
