@@ -295,51 +295,309 @@ body { padding-top: 0; }
 /* ══════════════════════════════
    PLACEMENT STATS
 ══════════════════════════════ */
-.stats-section { padding: 5rem 0; background: var(--off-white); position: relative; overflow: hidden; }
-.stats-section::before {
-  content: ''; position: absolute; top: -80px; left: -80px;
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(212,175,55,.1) 0%, transparent 70%);
-  pointer-events: none;
+.students-work-section {
+  position: relative;
+  padding: 5.6rem 0;
+  background:
+    radial-gradient(circle at top left, rgba(212,175,55,.14), transparent 26%),
+    radial-gradient(circle at top right, rgba(210,35,42,.14), transparent 20%),
+    linear-gradient(135deg, #050505 0%, #0d0d0f 55%, #121212 100%);
+  overflow: hidden;
 }
-.stats-section::after {
-  content: ''; position: absolute; bottom: -60px; right: -60px;
-  width: 300px; height: 300px;
-  background: radial-gradient(circle, rgba(210,35,42,.07) 0%, transparent 70%);
+.students-work-section::before,
+.students-work-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 999px;
   pointer-events: none;
+  filter: blur(8px);
 }
-.stat-card {
-  background: var(--white); border-radius: 16px; padding: 2rem 1rem;
-  text-align: center; box-shadow: 0 4px 24px rgba(0,0,0,.06);
-  border: 1px solid rgba(0,0,0,.04); position: relative; overflow: hidden;
-  transition: transform var(--trans), box-shadow var(--trans);
+.students-work-section::before {
+  width: 320px;
+  height: 320px;
+  top: -120px;
+  left: -100px;
+  background: radial-gradient(circle, rgba(212,175,55,.16), transparent 70%);
+}
+.students-work-section::after {
+  width: 360px;
+  height: 360px;
+  right: -120px;
+  bottom: -160px;
+  background: radial-gradient(circle, rgba(210,35,42,.18), transparent 72%);
+}
+.students-work-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.25rem;
+  position: relative;
+  z-index: 1;
+}
+.students-work-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .75rem;
+  font-weight: 700;
+}
+.students-work-kicker::before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold), rgba(212,175,55,.15));
+}
+.students-work-title {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(2.2rem, 4.4vw, 4rem);
+  font-weight: 700;
+  line-height: 1.04;
+  color: var(--gold-light);
+}
+.students-work-copy {
+  margin: 1rem 0 0;
+  max-width: 760px;
+  color: rgba(255,255,255,.9);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+.students-work-copy-2 {
+  margin-top: .8rem;
+  color: rgba(255,255,255,.72);
+  font-size: .95rem;
+}
+.students-work-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 240px;
+  padding: .92rem 1.55rem;
+  border: 1px solid rgba(212,175,55,.8);
+  border-radius: 999px;
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: .95rem;
+  font-weight: 500;
+  transition: transform var(--trans), box-shadow var(--trans), background var(--trans), color var(--trans);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
+}
+.students-work-cta:hover {
+  color: #fff2c0;
+  background: rgba(212,175,55,.08);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(212,175,55,.12);
+}
+.students-work-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 1.1fr .82fr;
+  gap: 1.35rem;
+  position: relative;
+  z-index: 1;
+}
+.work-stack-column,
+.work-side-column {
+  display: grid;
+  gap: 1.35rem;
+}
+.work-mini-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+.work-card {
+  position: relative;
+  display: block;
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 260px;
+  background: #141414;
+  border: 1px solid rgba(255,255,255,.08);
+  text-decoration: none;
+  box-shadow: 0 14px 44px rgba(0,0,0,.22);
+  transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow var(--trans), border-color var(--trans);
+}
+.work-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.02) 0%, rgba(0,0,0,.1) 35%, rgba(0,0,0,.82) 100%);
+  z-index: 1;
+}
+.work-card::after {
+  content: '';
+  position: absolute;
+  inset: -140% auto auto -30%;
+  width: 46%;
+  height: 260%;
+  transform: rotate(22deg);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent);
+  opacity: 0;
+  transition: opacity .2s ease, transform .7s ease;
+  z-index: 2;
+}
+.work-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212,175,55,.24);
+  box-shadow: 0 26px 60px rgba(0,0,0,.34);
+}
+.work-card:hover::after {
+  opacity: 1;
+  transform: translate(230%, 0) rotate(22deg);
+}
+.work-card img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  transition: transform .7s ease, filter .45s ease;
 }
-@media (max-width: 767px) {
-  .stat-card { padding: 1.5rem .8rem; }
-  .stat-num { font-size: 2.2rem !important; }
-  .stat-label { font-size: .65rem !important; }
+.work-card:hover img {
+  transform: scale(1.06);
+  filter: saturate(1.08);
 }
-.stat-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--red));
-  border-radius: 16px 16px 0 0;
+.work-card-tall {
+  min-height: 700px;
 }
-.stat-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,.12); }
-.stat-icon {
-  width: 52px; height: 52px; background: var(--gold-bg); border: 1px solid rgba(212,175,55,.25);
-  border-radius: 12px; display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 1.2rem; font-size: 1.3rem; color: var(--gold);
+.work-card-wide {
+  min-height: 450px;
 }
-.stat-num {
-  font-family: 'Bebas Neue', sans-serif; font-size: 3.8rem; line-height: 1;
-  color: var(--ink); display: flex; align-items: flex-start; justify-content: center;
-  letter-spacing: .04em; margin-bottom: .4rem;
+.work-card-portrait {
+  min-height: 305px;
 }
-.stat-num .sfx { font-size: 2.4rem; color: var(--red); }
-.stat-label {
-  font-family: 'Outfit', sans-serif; font-size: .74rem; font-weight: 600;
-  letter-spacing: .12em; text-transform: uppercase; color: var(--muted);
+.work-card-video {
+  min-height: 270px;
+}
+.work-mini-card {
+  min-height: 230px;
+}
+.work-collage-grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1.3fr .7fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: .55rem;
+  padding: .8rem;
+}
+.work-collage-grid img {
+  border-radius: 18px;
+}
+.work-collage-grid img:first-child {
+  grid-row: 1 / span 2;
+}
+.work-meta {
+  position: absolute;
+  left: 1.2rem;
+  right: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 3;
+}
+.work-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .42rem .9rem;
+  border-radius: 999px;
+  margin-bottom: .9rem;
+  background: rgba(255,255,255,.09);
+  border: 1px solid rgba(255,255,255,.14);
+  backdrop-filter: blur(10px);
+  color: #fff6d5;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.work-card-title {
+  margin: 0 0 .45rem;
+  color: #fff;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.08;
+}
+.work-card-copy {
+  margin: 0;
+  color: rgba(255,255,255,.76);
+  font-size: .88rem;
+  line-height: 1.7;
+  max-width: 90%;
+}
+.work-card-arrow {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 3;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.92);
+  color: var(--ink);
+  font-size: 1.5rem;
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
+  transition: transform var(--trans), background var(--trans), color var(--trans);
+}
+.work-card:hover .work-card-arrow {
+  transform: translate(4px, -4px);
+  background: var(--gold-light);
+  color: #111;
+}
+.work-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  width: 74px;
+  height: 74px;
+  margin: -37px 0 0 -37px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.36);
+  backdrop-filter: blur(14px);
+  color: #fff;
+  font-size: 2rem;
+  animation: workPulse 2.6s ease-in-out infinite;
+}
+.work-info-card {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(212,175,55,.08), rgba(210,35,42,.08));
+}
+.work-info-card::before {
+  background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.9));
+}
+.work-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: .7rem;
+  position: relative;
+  z-index: 3;
+}
+.work-info-list li {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  color: rgba(255,255,255,.82);
+  font-size: .84rem;
+}
+.work-info-list i {
+  color: var(--gold-light);
+}
+@keyframes workPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,.18); }
+  50% { transform: scale(1.08); box-shadow: 0 0 0 14px rgba(255,255,255,0); }
 }
 
 /* ══════════════════════════════
@@ -631,9 +889,264 @@ body { padding-top: 0; }
 .form-control-custom:focus { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(212,175,55,.12); }
 .form-label-custom { font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .4rem; display: block; }
 
-/* Responsive */
-@media (max-width: 767px) { .page-hero { height: 360px; } .hero-stat-strip { gap: 1.5rem; } }
+
 @media (max-width: 575px) { #topBar { display: none; } #mainNav { top: 0; } body { padding-top: 0; } }
+
+.work-section {
+    margin-top: 50px;
+    padding: 7rem 0 5rem;
+    background: #080808;
+    position: relative;
+    overflow: hidden;
+  }
+  .work-section::before {
+    content: '';
+    position: absolute;
+    top: -200px; left: -200px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,175,55,.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .work-section::after {
+    content: '';
+    position: absolute;
+    bottom: -200px; right: -200px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(210,35,42,.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .work-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+  }
+  .work-header-left .work-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: .9rem;
+  }
+  .work-header-left .work-kicker::before {
+    content: '';
+    width: 24px; height: 2px;
+    background: var(--gold);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .work-main-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 800;
+    color: var(--gold-light);
+    line-height: 1.05;
+    margin: 0 0 .7rem;
+  }
+  .work-sub {
+    font-size: .92rem;
+    color: rgba(255,255,255,.45);
+    line-height: 1.7;
+    max-width: 440px;
+    margin: 0;
+  }
+  .work-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .85rem 1.8rem;
+    border: 1.5px solid rgba(212,175,55,.7);
+    border-radius: 100px;
+    color: var(--gold-light);
+    text-decoration: none;
+    font-size: .84rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    white-space: nowrap;
+    transition: background var(--trans), transform var(--trans), box-shadow var(--trans), color var(--trans);
+    flex-shrink: 0;
+  }
+  .work-cta-btn:hover {
+    background: rgba(212,175,55,.12);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(212,175,55,.2);
+  }
+
+  /* ── BENTO GRID ── */
+  .work-bento {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr .9fr;
+    grid-template-rows: 280px 240px;
+    gap: 14px;
+    position: relative;
+    z-index: 1;
+  }
+  .wb-item {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #111;
+    border: 1px solid rgba(255,255,255,.06);
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+  }
+  .wb-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .65s cubic-bezier(.2,.8,.2,1), filter .45s ease;
+    filter: brightness(.88) saturate(.9);
+  }
+  .wb-item:hover img {
+    transform: scale(1.07);
+    filter: brightness(1) saturate(1.1);
+  }
+  .wb-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,.82) 100%);
+    z-index: 1;
+    border-radius: 18px;
+  }
+  .wb-item:hover::before {
+    background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.88) 100%);
+  }
+
+  /* Shine sweep on hover */
+  .wb-item::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -75%;
+    width: 50%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,.08), transparent);
+    transform: skewX(-20deg);
+    transition: left .6s ease;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .wb-item:hover::after { left: 130%; }
+
+  .wb-meta {
+    position: absolute;
+    bottom: 1.1rem; left: 1.2rem; right: 1.2rem;
+    z-index: 3;
+    transform: translateY(6px);
+    transition: transform .35s ease;
+  }
+  .wb-item:hover .wb-meta { transform: translateY(0); }
+  .wb-category {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    background: rgba(212,175,55,.2);
+    border: 1px solid rgba(212,175,55,.35);
+    backdrop-filter: blur(8px);
+    color: var(--gold-light);
+    font-size: .65rem; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase;
+    padding: .28rem .75rem;
+    border-radius: 100px;
+    margin-bottom: .6rem;
+  }
+  .wb-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.05rem; font-weight: 800;
+    color: #fff; line-height: 1.2;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .35s ease .05s, transform .35s ease .05s;
+  }
+  .wb-item:hover .wb-name { opacity: 1; transform: translateY(0); }
+  .wb-arrow {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.92);
+    color: #111;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    z-index: 3;
+    transform: translate(8px, -8px) scale(.85);
+    opacity: 0;
+    transition: transform .35s cubic-bezier(.34,1.56,.64,1), opacity .3s ease, background .25s;
+  }
+  .wb-item:hover .wb-arrow {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  .wb-arrow:hover { background: var(--gold-light); }
+
+  /* Grid layout positions */
+  .wb-1 { grid-column: 1; grid-row: 1 / span 2; }
+  .wb-2 { grid-column: 2; grid-row: 1; }
+  .wb-3 { grid-column: 3; grid-row: 1; }
+  .wb-4 { grid-column: 2; grid-row: 2; }
+  .wb-5 { grid-column: 3; grid-row: 2; }
+
+  /* Bottom strip */
+  .work-bottom-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    padding: 1.5rem 2rem;
+    border-radius: 14px;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.06);
+    position: relative;
+    z-index: 1;
+  }
+  .work-strip-stat { text-align: center; }
+  .work-strip-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.2rem; color: var(--gold); line-height: 1;
+  }
+  .work-strip-label {
+    font-size: .68rem; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: rgba(255,255,255,.35);
+    margin-top: .15rem;
+  }
+  .work-strip-divider { width: 1px; height: 40px; background: rgba(255,255,255,.07); }
+
+  @media (max-width: 991px) {
+    .work-bento {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 240px 240px 240px;
+    }
+    .wb-1 { grid-column: 1 / span 2; grid-row: 1; }
+    .wb-2 { grid-column: 1; grid-row: 2; }
+    .wb-3 { grid-column: 2; grid-row: 2; }
+    .wb-4 { grid-column: 1; grid-row: 3; }
+    .wb-5 { grid-column: 2; grid-row: 3; }
+  }
+  @media (max-width: 575px) {
+    .work-bento {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 220px);
+    }
+    .wb-1, .wb-2, .wb-3, .wb-4, .wb-5 {
+      grid-column: 1; grid-row: auto;
+    }
+    .work-bottom-strip { justify-content: center; }
+    .work-strip-divider { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -641,7 +1154,7 @@ body { padding-top: 0; }
 <!-- FLOATING -->
 <div class="floating-cta" role="complementary" aria-label="Quick contact">
   <a href="https://wa.me/917840002725" target="_blank" rel="noopener" class="floating-btn floating-wa" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-  <a href="tel:+917840002724" class="floating-btn floating-call" title="Call Us"><i class="bi bi-telephone-fill"></i></a>
+  <a href="tel:+917840002725" class="floating-btn floating-call" title="Call Us"><i class="bi bi-telephone-fill"></i></a>
 </div>
 <button id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="bi bi-chevron-up"></i></button>
 
@@ -665,7 +1178,7 @@ body { padding-top: 0; }
     <h1 class="page-hero-title" id="pageHeroTitle">
       Real Careers,<br/><em>Real Studios,</em><br/>Real Success
     </h1>
-    <div class="hero-stat-strip" aria-label="Key placement statistics">
+    <!-- <div class="hero-stat-strip" aria-label="Key placement statistics">
       <div class="hero-stat-item">
         <div class="hero-stat-num">1000<span style="color:var(--red);">+</span></div>
         <div class="hero-stat-label">Students Placed</div>
@@ -685,66 +1198,107 @@ body { padding-top: 0; }
         <div class="hero-stat-num">10<span style="color:var(--red);">+</span></div>
         <div class="hero-stat-label">Countries Worldwide</div>
       </div>
-    </div>
+    </div> -->
   </div>
 </header>
 
-<!-- ══════════════════════════════════════════════════════════
-  ① PLACEMENT STATS
-══════════════════════════════════════════════════════════ -->
-<section class="stats-section" id="stats" aria-labelledby="statsHeading">
-  <div class="container-xl position-relative">
-    <div class="text-center mb-5 sr">
-      <span class="sec-eyebrow">The Numbers</span>
-      <h2 class="sec-title sec-title-sm" id="statsHeading">
-        A Track Record Built<br/>on <span style="color:var(--red);font-style:italic;">Every Graduate</span>
-      </h2>
-      <div class="divider-gold centered"></div>
+
+
+<section class="work-section" aria-labelledby="workHeading">
+  <div class="container-xl">
+
+    <!-- Header -->
+    <div class="work-header sr">
+      <div class="work-header-left">
+        <div class="work-kicker">Student Portfolio</div>
+        <h2 class="work-main-title" id="workHeading">MAAC Students' Work</h2>
+        <p class="work-sub">Creativity speaks louder than words. See how our students are raising the bar with projects that blend skill, vision, and real-world training.</p>
+      </div>
+      <a href=""  rel="noopener" class="work-cta-btn">
+        <i class="bi bi-play-circle-fill"></i> See Magic in Action
+      </a>
     </div>
-    <div class="row g-4 justify-content-center">
-      <div class="col-6 col-md-4 col-lg-2 sr sr-delay-1">
-        <div class="stat-card">
-          <div class="stat-icon"><i class="bi bi-mortarboard-fill"></i></div>
-          <div class="stat-num" data-target="1000" data-suffix="+">0<span class="sfx">+</span></div>
-          <div class="stat-label">Alumni Placed</div>
+
+    <!-- Bento Grid -->
+    <div class="work-bento">
+
+      <!-- Item 1 — Tall left -->
+      <a href=""  rel="noopener" class="wb-item wb-1 sr sr-delay-1">
+        <img src="Images/work_01.png" alt="MAAC student work — 3D character design" loading="lazy"/>
+        <div class="wb-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        <div class="wb-meta">
+          <div class="wb-category"><i class="bi bi-stars"></i> 3D Design</div>
+          <p class="wb-name">RITVIK KUMAR DAS</p>
         </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 sr sr-delay-2">
-        <div class="stat-card">
-          <div class="stat-icon"><i class="bi bi-building-fill"></i></div>
-          <div class="stat-num" data-target="50" data-suffix="+">0<span class="sfx">+</span></div>
-          <div class="stat-label">Partner Studios</div>
+      </a>
+
+      <!-- Item 2 -->
+      <a href=""  rel="noopener" class="wb-item wb-2 sr sr-delay-2">
+        <img src="Images/work_02.png" alt="MAAC student work — VFX compositing" loading="lazy"/>
+        <div class="wb-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        <div class="wb-meta">
+          <div class="wb-category"><i class="bi bi-film"></i> VFX</div>
+          <p class="wb-name">TANUJ DHAMI</p>
         </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 sr sr-delay-3">
-        <div class="stat-card">
-          <div class="stat-icon"><i class="bi bi-globe2"></i></div>
-          <div class="stat-num" data-target="10" data-suffix="+">0<span class="sfx">+</span></div>
-          <div class="stat-label">Countries</div>
+      </a>
+
+      <!-- Item 3 -->
+      <a href=""  rel="noopener" class="wb-item wb-3 sr sr-delay-3">
+        <img src="Images/work_03.png" alt="MAAC student work — digital painting" loading="lazy"/>
+        <div class="wb-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        <div class="wb-meta">
+          <div class="wb-category"><i class="bi bi-brush"></i> Digital Art</div>
+          <p class="wb-name">ANJALI KASHYAP</p>
         </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 sr sr-delay-1">
-        <div class="stat-card">
-          <div class="stat-icon"><i class="bi bi-graph-up-arrow"></i></div>
-          <div class="stat-num" data-target="94" data-suffix="%">0<span class="sfx">%</span></div>
-          <div class="stat-label">Placement Rate</div>
+      </a>
+
+      <!-- Item 4 -->
+      <a href="" rel="noopener" class="wb-item wb-4 sr sr-delay-2">
+        <img src="Images/work_04.png" alt="MAAC student work — game environment" loading="lazy"/>
+        <div class="wb-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        <div class="wb-meta">
+          <div class="wb-category"><i class="bi bi-controller"></i> Game Design</div>
+          <p class="wb-name">MOHIK DHAKATE</p>
         </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 sr sr-delay-2">
-        <div class="stat-card">
-          <div class="stat-icon"><i class="bi bi-star-fill"></i></div>
-          <div class="stat-num" data-target="4" data-suffix=".8">0<span class="sfx">.8</span></div>
-          <div class="stat-label">Alumni Rating</div>
+      </a>
+
+      <!-- Item 5 -->
+      <a href=""  rel="noopener" class="wb-item wb-5 sr sr-delay-3">
+        <img src="Images/work_05.png" alt="MAAC student work — motion graphics" loading="lazy"/>
+        <div class="wb-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        <div class="wb-meta">
+          <div class="wb-category"><i class="bi bi-play-btn"></i> Motion</div>
+          <p class="wb-name">CHHANDOSI MUKHERJEE</p>
         </div>
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 sr sr-delay-3">
-        <div class="stat-card">
-          <div class="stat-icon"><i class="bi bi-calendar-check-fill"></i></div>
-          <div class="stat-num" data-target="60" data-suffix=" days">0<span class="sfx"> days</span></div>
-          <div class="stat-label">Avg. Time to Offer</div>
-        </div>
-      </div>
+      </a>
+
     </div>
+
+    <!-- Bottom Strip -->
+    <!-- <div class="work-bottom-strip sr">
+      <div class="work-strip-stat">
+        <div class="work-strip-num">5000<span style="color:var(--red);">+</span></div>
+        <div class="work-strip-label">Student Projects</div>
+      </div>
+      <div class="work-strip-divider"></div>
+      <div class="work-strip-stat">
+        <div class="work-strip-num">20<span style="color:var(--red);">+</span></div>
+        <div class="work-strip-label">Years of Creativity</div>
+      </div>
+      <div class="work-strip-divider"></div>
+      <div class="work-strip-stat">
+        <div class="work-strip-num">15<span style="color:var(--red);">+</span></div>
+        <div class="work-strip-label">Specialisations</div>
+      </div>
+      <div class="work-strip-divider"></div>
+      <p style="font-size:.88rem;color:rgba(255,255,255,.4);line-height:1.7;max-width:340px;margin:0;">
+        Every project you see here was created by a student — using industry tools, guided by professionals, in our Ghaziabad studios.
+      </p>
+      <a href="https://www.maacindia.com/" target="_blank" rel="noopener" class="work-cta-btn" style="font-size:.78rem;padding:.7rem 1.4rem;">
+        View Full Portfolio <i class="bi bi-arrow-right"></i>
+      </a>
+    </div> -->
+
   </div>
 </section>
 
@@ -1406,7 +1960,7 @@ body { padding-top: 0; }
             <i class="bi bi-collection"></i> Browse All Courses
           </a>
         </div>
-        <div class="cta-micro-stats">
+        <!-- <div class="cta-micro-stats">
           <div>
             <div class="cta-micro-num">1000<span style="color:var(--red);">+</span></div>
             <div class="cta-micro-label">Alumni Placed</div>
@@ -1426,7 +1980,7 @@ body { padding-top: 0; }
             <div class="cta-micro-num">60</div>
             <div class="cta-micro-label">Days Avg. to Offer</div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

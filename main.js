@@ -98,7 +98,7 @@ const MAAC_NAVBAR = `
       <a href="#enquiryModal" data-bs-toggle="modal" data-bs-target="#enquiryModal" data-bs-dismiss="offcanvas" class="btn-brand-red justify-content-center">
         <i class="bi bi-send"></i> Enquire Now
       </a>
-      <a href="tel:+917840002724" class="btn-outline-dark justify-content-center">
+  <a href="tel:+917840002725" class="btn-outline-dark justify-content-center">
         <i class="bi bi-telephone"></i> Call Us
       </a>
     </div>
@@ -181,7 +181,7 @@ const MAAC_FOOTER = `
           <div class="footer-contact-item">
             <i class="bi bi-telephone-fill footer-contact-icon" aria-hidden="true"></i>
             <div class="footer-contact-text">
-              <a href="tel:+917840002724">+91 784 000 2724</a> /
+              <a href="tel:+917840002725">+91 784 000 2725</a> /
               <a href="tel:+917840002725">2725</a>
             </div>
           </div>
@@ -222,10 +222,7 @@ const MAAC_FOOTER = `
         &copy; <span id="footerYear"></span> MAAC Ghaziabad RDC. All rights reserved. |
         NSDC &amp; MESC Affiliated.
       </div>
-      <p class="footer-credit">
-        Developed and Managed by
-        <a href="https://lso360seoplugin.com/" target="_blank" rel="noopener">Advertising India</a>
-      </p>
+      
       <nav class="footer-bottom-links" aria-label="Footer legal links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Use</a>
@@ -248,29 +245,7 @@ const MAAC_LOCATION_SECTION = `
     </div>
 
     <div class="maac-location-wrap">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.023773793792!2d77.43697957550003!3d28.658567282481734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1b4fd4bf3b3%3A0xe9f4d1ebdcef7a7f!2sMAAC%20Ghaziabad%20RDC!5e0!3m2!1sen!2sin!4v1744033458290!5m2!1sen!2sin"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="MAAC Ghaziabad RDC location map"
-        aria-label="Interactive map showing MAAC Ghaziabad RDC location">
-      </iframe>
-
-      <div class="maac-location-card">
-        <div class="maac-location-title">MAAC Ghaziabad RDC</div>
-        <div class="maac-location-text">
-          Advocate Chamber 4, 1st Floor,<br/>
-          Near Domino's Pizza, RDC Rajnagar,<br/>
-          Ghaziabad, Uttar Pradesh - 201002
-        </div>
-        <div class="maac-location-meta">
-          <span><i class="bi bi-telephone-fill"></i> +91 784 000 2724 / 2725</span>
-          <span><i class="bi bi-clock-fill"></i> Mon-Sat: 9:00 AM - 7:00 PM</span>
-        </div>
-        <a href="https://maps.app.goo.gl/HyWppxWkPRFxATjP6" target="_blank" rel="noopener" class="maac-directions-btn">
-          <i class="bi bi-sign-turn-right-fill"></i> Get Directions
-        </a>
-      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2682.0157295681743!2d77.43820905755561!3d28.676618715455938!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1de7da8713d%3A0xeb9b2c5fad0a4aa7!2sMAAC%20Ghaziabad%20RDC%20Raj%20Nagar%20%7C%20Best%203D%20Animation%20%26%202D%20Animation%2C%20Graphic%20Designing%2C%20VFX%2C%20Video%20Editing%20Institute%20in%20Ghaziabad!5e1!3m2!1sen!2sin!4v1776686001967!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
@@ -1050,6 +1025,8 @@ textarea.form-control-custom {
 
     const enquiryModal = new window.bootstrap.Modal(modalEl);
     const rootEl = document.documentElement;
+    const autoPopupSessionKey = "maacEnquiryAutoShown";
+
     modalEl.addEventListener("show.bs.modal", () => {
       document.body.style.overflow = "hidden";
       rootEl.style.overflow = "hidden";
@@ -1059,8 +1036,21 @@ textarea.form-control-custom {
       rootEl.style.overflow = "";
     });
 
+    try {
+      if (window.sessionStorage.getItem(autoPopupSessionKey) === "true") {
+        return;
+      }
+    } catch (error) {
+      // Ignore storage issues and continue with one-page fallback behavior.
+    }
+
     window.setTimeout(() => {
       if (!modalEl.classList.contains("show")) {
+        try {
+          window.sessionStorage.setItem(autoPopupSessionKey, "true");
+        } catch (error) {
+          // Ignore storage issues and still show the popup once on this page.
+        }
         enquiryModal.show();
       }
     }, 10000);
