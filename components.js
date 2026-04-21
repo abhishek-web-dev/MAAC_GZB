@@ -717,4 +717,13 @@ const MAAC_FOOTER = `
   if (footerYear) {
     footerYear.textContent = new Date().getFullYear();
   }
+
+  // Dynamically inject favicon across all pages if not present in the HTML
+  if (!document.querySelector("link[rel~='icon']")) {
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.type = "image/png";
+    favicon.href = "Images/favicon.png";
+    document.head.appendChild(favicon);
+  }
 })();

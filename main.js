@@ -800,6 +800,15 @@ textarea.form-control-custom {
     display: none !important;
   }
 
+  // Dynamically inject favicon across all pages if not present in the HTML
+  if (!document.querySelector("link[rel~='icon']")) {
+    const favicon = document.createElement("link");
+    favicon.rel = "icon";
+    favicon.type = "image/png";
+    favicon.href = "Images/favicon.png";
+    document.head.appendChild(favicon);
+  }
+
   #mainNav {
     top: 0 !important;
     padding: .9rem 0 !important;
